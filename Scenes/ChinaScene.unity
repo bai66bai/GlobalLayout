@@ -613,6 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 51861201}
   - component: {fileID: 51861202}
+  - component: {fileID: 51861203}
   m_Layer: 5
   m_Name: Shanghai
   m_TagString: Untagged
@@ -661,6 +662,23 @@ MonoBehaviour:
   SelectedText: {fileID: 929172217}
   UnSelectedText: {fileID: 1619805162}
   Label: {fileID: 492183414}
+--- !u!114 &51861203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51861200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23210b93cc62e854aa8278c9cfe2facf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransformTime: 0.5
+  ButtonTransform: {fileID: 1929201493}
+  StartBtnScale: 0.5
+  VerticalLineTransform: {fileID: 519961824}
+  LabelImg: {fileID: 33924985}
 --- !u!1 &64160312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,6 +4030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493142513}
   - component: {fileID: 493142514}
+  - component: {fileID: 493142515}
   m_Layer: 5
   m_Name: Hangzhou
   m_TagString: Untagged
@@ -4060,6 +4079,23 @@ MonoBehaviour:
   SelectedText: {fileID: 1980255867}
   UnSelectedText: {fileID: 1996789451}
   Label: {fileID: 927495911}
+--- !u!114 &493142515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493142512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23210b93cc62e854aa8278c9cfe2facf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransformTime: 0.5
+  ButtonTransform: {fileID: 1404995411}
+  StartBtnScale: 0.5
+  VerticalLineTransform: {fileID: 1334849678}
+  LabelImg: {fileID: 1604248940}
 --- !u!1 &519961823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5890,6 +5926,7 @@ GameObject:
   - component: {fileID: 740466965}
   - component: {fileID: 740466968}
   - component: {fileID: 740466969}
+  - component: {fileID: 740466970}
   m_Layer: 5
   m_Name: Beijing
   m_TagString: Untagged
@@ -5951,6 +5988,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &740466970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740466964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23210b93cc62e854aa8278c9cfe2facf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransformTime: 0.5
+  ButtonTransform: {fileID: 283496316}
+  StartBtnScale: 0.5
+  VerticalLineTransform: {fileID: 1036007269}
+  LabelImg: {fileID: 2016584635}
 --- !u!1 &751654540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8017,6 +8071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136981097}
   - component: {fileID: 1136981098}
+  - component: {fileID: 1136981099}
   m_Layer: 5
   m_Name: Hongkong
   m_TagString: Untagged
@@ -8065,6 +8120,23 @@ MonoBehaviour:
   SelectedText: {fileID: 141821221}
   UnSelectedText: {fileID: 547145294}
   Label: {fileID: 646669914}
+--- !u!114 &1136981099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136981096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23210b93cc62e854aa8278c9cfe2facf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransformTime: 0.5
+  ButtonTransform: {fileID: 1362988193}
+  StartBtnScale: 0.5
+  VerticalLineTransform: {fileID: 866400743}
+  LabelImg: {fileID: 1282799261}
 --- !u!1 &1181479134
 GameObject:
   m_ObjectHideFlags: 0
@@ -14553,6 +14625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990976437}
   - component: {fileID: 1990976438}
+  - component: {fileID: 1990976439}
   m_Layer: 5
   m_Name: Suzhou
   m_TagString: Untagged
@@ -14601,6 +14674,23 @@ MonoBehaviour:
   SelectedText: {fileID: 256241273}
   UnSelectedText: {fileID: 1976209258}
   Label: {fileID: 2022455220}
+--- !u!114 &1990976439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990976436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23210b93cc62e854aa8278c9cfe2facf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransformTime: 0.5
+  ButtonTransform: {fileID: 1383237049}
+  StartBtnScale: 0.5
+  VerticalLineTransform: {fileID: 481761604}
+  LabelImg: {fileID: 166945801}
 --- !u!1 &1996789449
 GameObject:
   m_ObjectHideFlags: 0
