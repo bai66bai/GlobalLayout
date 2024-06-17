@@ -32,6 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3306473430244125521}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -98,6 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5997246011084782074}
   - component: {fileID: 3041061302705702435}
+  - component: {fileID: 4031959607066056227}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -112,7 +114,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5954357341867788819}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -120,6 +121,7 @@ Transform:
   m_Children:
   - {fileID: 3306473430244125521}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3041061302705702435
 MonoBehaviour:
@@ -135,6 +137,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 569106828616372255}
   transitionTime: 0.5
+--- !u!114 &4031959607066056227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954357341867788819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetIp: 192.168.3.219
+  targetPort: 8686
 --- !u!1 &9202181263731316991
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +185,7 @@ RectTransform:
   m_Children:
   - {fileID: 2343206102158781679}
   m_Father: {fileID: 5997246011084782074}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -194,7 +211,6 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
