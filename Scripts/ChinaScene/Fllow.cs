@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Fllow : MonoBehaviour
 {
-    public Transform beijingTransform;
-    public Transform hongkongTransform;
-    public Transform shanghaiTransform;
-    public Transform suzhouTransfrom;
-    public Transform hangzhouTransfrom;
-
     public List<GameObject> Regions;
 
     // Start is called before the first frame update
@@ -27,11 +21,5 @@ public class Fllow : MonoBehaviour
         {
             e.transform.localScale = targetScale;
         });
-        //beijingTransform.localScale = targetScale;
-        //hongkongTransform.localScale = targetScale;
-        //shanghaiTransform.localScale = targetScale;
-        //suzhouTransfrom.localScale = targetScale;
-        //hangzhouTransfrom.localScale = targetScale;
-       
     }
 }

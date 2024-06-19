@@ -10103,7 +10103,7 @@ Transform:
   m_GameObject: {fileID: 1426310071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1416.478, y: -638.59174, z: -0.165308}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12058,7 +12058,7 @@ Transform:
   m_GameObject: {fileID: 1650303024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1416.478, y: 639.59174, z: -9.834692}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12636,12 +12636,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35ef1b29cc09a94f9685c8ddd4d9b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beijingTransform: {fileID: 740466965}
-  hongkongTransform: {fileID: 1136981097}
-  shanghaiTransform: {fileID: 51861201}
-  suzhouTransfrom: {fileID: 1990976437}
-  hangzhouTransfrom: {fileID: 493142513}
-  Regions: []
+  Regions:
+  - {fileID: 740466964}
+  - {fileID: 1136981096}
+  - {fileID: 51861200}
+  - {fileID: 1990976436}
+  - {fileID: 493142512}
 --- !u!114 &1790909542
 MonoBehaviour:
   m_ObjectHideFlags: 0

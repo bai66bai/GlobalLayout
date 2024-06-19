@@ -315,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5317\u4EAC"
+  m_text: "\u4F26\u6566"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
@@ -3902,11 +3902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35ef1b29cc09a94f9685c8ddd4d9b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beijingTransform: {fileID: 740466965}
-  hongkongTransform: {fileID: 0}
-  shanghaiTransform: {fileID: 0}
-  suzhouTransfrom: {fileID: 0}
-  hangzhouTransfrom: {fileID: 0}
   Regions:
   - {fileID: 740466964}
 --- !u!114 &1790909542
@@ -4600,7 +4595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5317\u4EAC | BEIJING"
+  m_text: "\u4F26\u6566 | London"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
