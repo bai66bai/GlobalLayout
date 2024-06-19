@@ -23,8 +23,11 @@ public class CtrImgScale : MonoBehaviour
 
     private Vector2 originalSize; //初始尺寸
 
+    private string cityName;
+
     private void Start()
     {
+        cityName = transform.parent.parent.name;
         rectTransform = GetComponent<RectTransform>();
 
         // 获取当前对象的宽度和高度
@@ -41,12 +44,12 @@ public class CtrImgScale : MonoBehaviour
     {
         if (isZoomed)
         {
-            client.SendMsg("scale:small");
+            client.SendMsg($"small:{cityName}");
             StartCoroutine(AnimateZoom(originalPosition, originalSize));
         }
         else
         {
-            client.SendMsg("scale:big");
+            client.SendMsg($"big:{cityName}");
             originalPosition = rectTransform.position; //保存初始位置
             StartCoroutine(AnimateZoom(targetPosition, targetSize));
         }
