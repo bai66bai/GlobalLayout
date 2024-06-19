@@ -9,6 +9,8 @@ public class CtrImgScale : MonoBehaviour
 
     public float duration = 0.5f;
 
+    public TCPClient client;
+
     private Vector2 targetSize = new(1066f, 600f);
 
     private Vector2 targetPosition;
@@ -39,10 +41,12 @@ public class CtrImgScale : MonoBehaviour
     {
         if (isZoomed)
         {
+            client.SendMsg("scale:small");
             StartCoroutine(AnimateZoom(originalPosition, originalSize));
         }
         else
         {
+            client.SendMsg("scale:big");
             originalPosition = rectTransform.position; //±£¥Ê≥ı ºŒª÷√
             StartCoroutine(AnimateZoom(targetPosition, targetSize));
         }

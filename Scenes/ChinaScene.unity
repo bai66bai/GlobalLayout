@@ -1398,6 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  client: {fileID: 1186539806}
 --- !u!114 &155636836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2802,13 +2803,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1790909542}
           m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
           m_MethodName: ClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 740466965}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Beijing
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &296534881
@@ -7956,6 +7957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  client: {fileID: 1186539806}
 --- !u!114 &1114762858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8385,6 +8387,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeoutSeconds: 900
+--- !u!114 &1186539806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4031959607066056227, guid: b67cd987ee8d67741ad86bbbe679eeca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1186539802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186539804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1207495244
 GameObject:
   m_ObjectHideFlags: 0
@@ -9476,13 +9490,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1790909542}
           m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
           m_MethodName: ClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 1136981097}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Hongkong
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1366925494
@@ -9805,13 +9819,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1790909542}
           m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
           m_MethodName: ClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 1990976437}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Suzhou
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1400544240
@@ -10007,13 +10021,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1790909542}
           m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
           m_MethodName: ClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 493142513}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Hangzhou
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1426310071
@@ -11449,6 +11463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  client: {fileID: 1186539806}
 --- !u!114 &1558690232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12668,6 +12683,7 @@ MonoBehaviour:
   - {fileID: 1877743618}
   - {fileID: 1248322063}
   BgPanel: {fileID: 1839817041}
+  client: {fileID: 1186539806}
 --- !u!1 &1793691347
 GameObject:
   m_ObjectHideFlags: 0
@@ -14090,13 +14106,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1790909542}
           m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
           m_MethodName: ClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 51861201}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Shanghai
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1952950178
@@ -15583,6 +15599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  client: {fileID: 1186539806}
 --- !u!114 &2092882097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15663,6 +15680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  client: {fileID: 1186539806}
 --- !u!114 &2121045485
 MonoBehaviour:
   m_ObjectHideFlags: 0

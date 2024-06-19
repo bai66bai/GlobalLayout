@@ -447,6 +447,7 @@ MonoBehaviour:
   - {fileID: 466693971}
   - {fileID: 1691413831}
   duration: 0.5
+  client: {fileID: 1449361619}
 --- !u!1 &241743110
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +697,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 437490787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1031501429}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadNewScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &437490787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,13 +806,13 @@ MonoBehaviour:
         - m_Target: {fileID: 160633072}
           m_TargetAssemblyTypeName: CtrBtn, Assembly-CSharp
           m_MethodName: OnClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 466693971}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: America
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1534217489}
@@ -2784,18 +2797,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1449361616}
-          m_TargetAssemblyTypeName: CtrVideo, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: ChinaScene
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 560466364}
           m_TargetAssemblyTypeName: CtrVideo, Assembly-CSharp
           m_MethodName: OnLodeScene
@@ -2811,13 +2812,13 @@ MonoBehaviour:
         - m_Target: {fileID: 160633072}
           m_TargetAssemblyTypeName: CtrBtn, Assembly-CSharp
           m_MethodName: OnClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 1438823620}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: China
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1449361616 stripped
@@ -2839,6 +2840,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeoutSeconds: 900
+--- !u!114 &1449361619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4031959607066056227, guid: b67cd987ee8d67741ad86bbbe679eeca,
+    type: 3}
+  m_PrefabInstance: {fileID: 612096722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449361616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1534217487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,13 +2999,13 @@ MonoBehaviour:
         - m_Target: {fileID: 160633072}
           m_TargetAssemblyTypeName: CtrBtn, Assembly-CSharp
           m_MethodName: OnClickBtn
-          m_Mode: 2
+          m_Mode: 5
           m_Arguments:
-            m_ObjectArgument: {fileID: 1691413831}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Britain
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1069086130}

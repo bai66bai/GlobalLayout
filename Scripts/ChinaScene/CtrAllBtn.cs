@@ -8,13 +8,13 @@ public class CtrAllBtn : MonoBehaviour
     public Transform PopupWindow;
     public List<GameObject> RegionalInformations;
     public Transform BgPanel;
-
+    public TCPClient client;
     private bool IsStart = false;
     //控制第一次点击按钮缓慢缩放
     private bool isFrist = true;
 
 
-    public void ClickBtn(Transform btn)
+    public void ClickBtn(string name)
     {
         if (!IsStart)
         {
@@ -26,17 +26,16 @@ public class CtrAllBtn : MonoBehaviour
         {
             CtrBtnChange ctrBtnChange = u.GetComponent<CtrBtnChange>();
 
-            if(btn.name == u.name)
+            if(name == u.name)
             {
+                client.SendMsg($"btnName:{name}");
                 int index = BtnTransforms.IndexOf(u);
                 ShowInFormations(index);
                 ctrBtnChange.SelectBtn();
             }
             else
             {
-                
                 ctrBtnChange.UnSelectedBtn(isFrist);
-
             }
         });
         isFrist = false;
