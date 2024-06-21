@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CtrBtn : MonoBehaviour
@@ -16,17 +17,19 @@ public class CtrBtn : MonoBehaviour
 
     public TCPClient client;
 
-    private Color unSelectedColor = new(1f, 1f, 1f, 1f);
+    private Color baseColor = new(1f, 1f, 1f, 0.5f);
+    private Color baseTextColor = new(8 / 255f, 64 / 255f, 248 / 255f, 0.5f);
 
     private Color selectedColor = new(8 / 255f, 64 / 255f, 248 / 255f, 1f);
 
+    private Color unSelectedColor = new(1f, 1f, 1f, 1f);
     public void OnClickBtn(string name)
     {
 
         Btns.ForEach(b =>
         {
             int index = Btns.IndexOf(b);
-
+            b.GetComponent<EventTrigger>().enabled = false;
             if (b.name == name)
             {
                 client.SendMsg($"btnName:{name}");
@@ -34,7 +37,8 @@ public class CtrBtn : MonoBehaviour
             }
             else
             {
-                StartCoroutine(ChangeColorOverTime(textMeshProUGUIs[index], imageList[index], selectedColor, unSelectedColor, duration));
+                
+                StartCoroutine(ChangeColorOverTime(textMeshProUGUIs[index], imageList[index], baseTextColor, baseColor, duration));
             }
         });
     }
@@ -58,11 +62,13 @@ public class CtrBtn : MonoBehaviour
             float tcolorR = Mathf.SmoothStep(btnStartColor.r, btnColor.r, t);
             float tcolorG = Mathf.SmoothStep(btnStartColor.g, btnColor.g, t);
             float tcolorB = Mathf.SmoothStep(btnStartColor.b, btnColor.b, t);
-            btn.color = new(tcolorR, tcolorG, tcolorB, 1f);
+            float tcolorA = Mathf.SmoothStep(btnStartColor.a, btnColor.a, t);
+            btn.color = new(tcolorR, tcolorG, tcolorB, tcolorA);
             float icolorR = Mathf.SmoothStep(textStartColor.r, textColor.r, t);
             float icolorG = Mathf.SmoothStep(textStartColor.g, textColor.g, t);
             float icolorB = Mathf.SmoothStep(textStartColor.b, textColor.b, t);
-            text.color = new(icolorR, icolorG, icolorB, 1f);
+            float icolorA = Mathf.SmoothStep(textStartColor.a, textColor.a, t);
+            text.color = new(icolorR, icolorG, icolorB, icolorA);
 
             yield return null;
         }
