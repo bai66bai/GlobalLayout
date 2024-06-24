@@ -13,6 +13,8 @@ public class CtrBtn : MonoBehaviour
 
     public List<GameObject> Btns;
 
+    public List<GameObject> CtrBackBtn;
+
     public float duration = 2.0f;
 
     public TCPClient client;
@@ -25,21 +27,21 @@ public class CtrBtn : MonoBehaviour
     private Color unSelectedColor = new(1f, 1f, 1f, 1f);
     public void OnClickBtn(string name)
     {
-
+        Debug.Log(name);
         Btns.ForEach(b =>
         {
             int index = Btns.IndexOf(b);
-            b.GetComponent<EventTrigger>().enabled = false;
             if (b.name == name)
             {
                 client.SendMsg($"btnName:{name}");
+                CtrBackBtnEnable();
                 StartCoroutine(ChangeColorOverTime(textMeshProUGUIs[index], imageList[index], unSelectedColor, selectedColor, duration));
             }
             else
             {
-                
                 StartCoroutine(ChangeColorOverTime(textMeshProUGUIs[index], imageList[index], baseTextColor, baseColor, duration));
             }
+            b.GetComponent<EventTrigger>().enabled = false;
         });
     }
 
@@ -78,7 +80,9 @@ public class CtrBtn : MonoBehaviour
         HideBtn();
     }
 
-
+    /// <summary>
+    /// 控制按钮到达时间消失
+    /// </summary>
     public void HideBtn()
     {
         imageList.ForEach(i =>
@@ -119,6 +123,17 @@ public class CtrBtn : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    /// <summary>
+    /// 禁用返回按钮
+    /// </summary>
+    public void CtrBackBtnEnable()
+    {
+        CtrBackBtn.ForEach(b =>
+        {
+            b.GetComponent<Button>().interactable = false;
+        });
     }
 }
 

@@ -1,17 +1,14 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class SwipeDetection : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+
+public class SwipeDetection : MonoBehaviour
 {
-    public RectTransform swipeArea; // 设定滑动区域的RectTransform
+    public RectTransform swipeArea;
     public float duration = 0.5f;
     public int MovingDistance = 1920;
 
     public Turnthepage Turnthepage;
-    private Vector2 startPosition;
-    private Vector2 endPosition;
-    private float minSwipeDistance = 50f; // 设置最小滑动距离
 
     private bool isFinish = true;
     [HideInInspector] public int bigIndex; //最大滑动次数
@@ -20,65 +17,12 @@ public class SwipeDetection : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     void Start()
     {
-        startPosition = Vector2.zero;
-        endPosition = Vector2.zero;
         float width = swipeArea.rect.width;
         bigIndex = (int)width / 1920;
 
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        // 检查是否在滑动区域内开始滑动
-        if (RectTransformUtility.RectangleContainsScreenPoint(swipeArea, eventData.position, eventData.pressEventCamera))
-        {
-            startPosition = eventData.position;
-        }
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        // 更新滑动位置
-        if (RectTransformUtility.RectangleContainsScreenPoint(swipeArea, eventData.position, eventData.pressEventCamera))
-        {
-            endPosition = eventData.position;
-            // 在这里处理滑动逻辑（可以选择处理实时滑动）
-        }
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        // 结束滑动
-        if (RectTransformUtility.RectangleContainsScreenPoint(swipeArea, eventData.position, eventData.pressEventCamera))
-        {
-            endPosition = eventData.position;
-            DetectSwipeDirection();
-        }
-    }
-
-    private void DetectSwipeDirection()
-    {
-        float swipeDistance = (endPosition - startPosition).magnitude;
-
-        if (swipeDistance >= minSwipeDistance)
-        {
-            float swipeDirectionX = endPosition.x - startPosition.x;
-
-            if (Mathf.Abs(swipeDirectionX) > Mathf.Abs(endPosition.y - startPosition.y))
-            {
-                if (swipeDirectionX > 0)
-                {
-                    ToRight();
-                    Debug.Log("向右滑动");
-                }
-                else
-                {
-                    ToLeft();
-                    Debug.Log("向左滑动");
-                }
-            }
-        }
-    }
+   
 
 
     public void ToRight()

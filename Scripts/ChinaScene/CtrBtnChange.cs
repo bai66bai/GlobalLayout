@@ -20,7 +20,7 @@ public class CtrBtnChange : MonoBehaviour
     public GameObject Label;
  
 
-    private Vector2 UnSelectedtLocalScale = new(0.4f, 0.6f);
+    public Vector2 UnSelectedtLocalScale = new(0.4f, 0.6f);
 
     private Vector2 selectedtLocalScale;
 

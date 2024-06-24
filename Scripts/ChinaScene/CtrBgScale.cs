@@ -4,8 +4,8 @@ using UnityEngine;
 public class CtrBgScale : MonoBehaviour
 {
 
-    private Vector3 targetLocalPosition = new(-765f, 430f,0);
-    private Vector3 targetScale = new(1.8f, 1.8f,1f);
+    public Vector3 targetLocalPosition = new(-765f, 430f,0);
+    public Vector3 targetScale = new(1.8f, 1.8f,1f);
 
     public float duration = 2.0f;
 
