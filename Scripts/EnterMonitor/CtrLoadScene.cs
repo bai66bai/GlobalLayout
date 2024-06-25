@@ -24,9 +24,20 @@ public class CtrLoadScene : MonoBehaviour
     }
     public void StartDestroy(string name)
     {
+        
+        VLCPlayerExample[] vLCPlayer1Examples = tempObject1.GetComponentsInChildren<VLCPlayerExample>();
+        foreach (var item in vLCPlayer1Examples)
+        {
+            item.DestroyMediaPlayer();
+        }
+        VLCPlayerExample[] vLCPlayerExamples = tempObject.GetComponentsInChildren<VLCPlayerExample>();
+        foreach (var item in vLCPlayerExamples)
+        {
+            item.DestroyMediaPlayer();
+        }
+        tempObject = null;
+        tempObject1 = null;
         LoadScene = name;
-        Destroy(tempObject);
-        Destroy(tempObject1);
     }
 
 }

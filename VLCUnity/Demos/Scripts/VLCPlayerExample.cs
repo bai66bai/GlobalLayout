@@ -73,8 +73,6 @@ public class VLCPlayerExample : MonoBehaviour
     void OnDestroy()
 	{
 		DestroyMediaPlayer();
-        //Dispose of mediaPlayer, or it will stay in nemory and keep playing audio
-        //StartCoroutine(DestoryMediaPlayerAsync());
     }
 
 	public void DestoryVLCPlayer() => StartCoroutine(DestoryMediaPlayerAsync());
@@ -297,15 +295,19 @@ public class VLCPlayerExample : MonoBehaviour
 		mediaPlayer = new MediaPlayer(libVLC);
 	}
 
+	public bool HasDestroyed = false;
+
 	//Dispose of the MediaPlayer object.
-	void DestroyMediaPlayer()
+	public void DestroyMediaPlayer()
 	{
         hasLoaded = false;
         Log("VLCPlayerExample DestroyMediaPlayer");
 		mediaPlayer?.Stop();
 		mediaPlayer?.Dispose();
 		mediaPlayer = null;
-	}
+		HasDestroyed = true;
+
+    }
 
 	private IEnumerator DestoryMediaPlayerAsync()
 	{
@@ -319,8 +321,7 @@ public class VLCPlayerExample : MonoBehaviour
         
         mediaPlayer = null;
         yield return null;
-        Destroy(transform.parent.parent.parent.gameObject);
-
+        HasDestroyed = true;
     }
 
 	//Resize the output textures to the size of the video

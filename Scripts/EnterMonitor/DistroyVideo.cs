@@ -5,7 +5,6 @@ using UnityEngine;
 public class DistroyVideo : MonoBehaviour
 {
     public List<GameObject> VideoScreens;
-    private bool isExist = true;
 
     public void DestroyList()
     {
@@ -17,16 +16,7 @@ public class DistroyVideo : MonoBehaviour
                 player.DestoryVLCPlayer();
             }
         }
-        isExist = false;
     }
 
 
-    private void Update()
-    {
-        if(!isExist)
-        {
-            foreach (var item in VideoScreens)
-                Debug.Log(item);
-        }
-    }
 }

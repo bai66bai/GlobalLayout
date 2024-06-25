@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +9,18 @@ public class CtrBtnsEM : MonoBehaviour
     public List<GameObject> Btns;
     public List<GameObject> Contents;
 
+    public GameObject Suzhou;
+    public GameObject Hangzhou;
+
+    [HideInInspector]
+    public bool IsReleasingSuZhou = false;
+    [HideInInspector]
+    public bool IsReleasingHangZhou = false;
+
     private void Start()
     {
-            changeStyle(TabStore.SelectedTab);
-            changeContent(TabStore.SelectedTab);
+        changeStyle(TabStore.SelectedTab);
+        changeContent(TabStore.SelectedTab);
     }
 
     public void OnClickBtn(string name)
@@ -28,6 +35,7 @@ public class CtrBtnsEM : MonoBehaviour
             }
         });
     }
+
 
     /// <summary>
     /// 控制按钮的样式
@@ -57,18 +65,62 @@ public class CtrBtnsEM : MonoBehaviour
         });
     }
 
+
+    void Update()
+    {
+ 
+        if (IsReleasingHangZhou || IsReleasingSuZhou)
+        {
+            bool hasAllVlcReleased = true;
+            foreach (Transform child in IsReleasingSuZhou ? Suzhou.transform : Hangzhou.transform)
+            {
+                VLCPlayerExample[] vLCPlayerExamples = child.gameObject.GetComponentsInChildren<VLCPlayerExample>();
+                foreach (var item in vLCPlayerExamples)
+                {
+                    if(!item.HasDestroyed)
+                    {
+                        hasAllVlcReleased = false;
+                        break;
+                    }
+                }                
+
+                if(hasAllVlcReleased)
+                {
+                    Destroy(child.gameObject);
+                    IsReleasingHangZhou = false;
+                    IsReleasingSuZhou = false;
+                }
+            }
+
+
+        }
+    }
+
     private void changeContent(int index)
     {
-        if(index == 0)
+        if (index == 0)
         {
+
+            VLCPlayerExample[] vLCPlayer1Examples = Hangzhou.GetComponentsInChildren<VLCPlayerExample>();
+            foreach (var item in vLCPlayer1Examples)
+            {
+                item.DestoryVLCPlayer();
+            }
             Contents[0].SetActive(true);
-            Contents[1].SetActive(false);
+            Suzhou.GetComponent<CtrVideoPrefab>().LoadPrefabSync();
+            IsReleasingHangZhou = true;
         }
         else
         {
-            Contents[0].SetActive(false);
-            Contents[1].SetActive(true);
 
+            VLCPlayerExample[] vLCPlayer1Examples = Suzhou.GetComponentsInChildren<VLCPlayerExample>();
+            foreach (var item in vLCPlayer1Examples)
+            {
+                item.DestoryVLCPlayer();
+            }
+            Contents[1].SetActive(true);
+           Hangzhou.GetComponent<CtrVideoPrefab>().LoadPrefabSync();
+            IsReleasingSuZhou = true;
         }
     }
 }
