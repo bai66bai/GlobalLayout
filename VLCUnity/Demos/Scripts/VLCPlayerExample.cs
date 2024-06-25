@@ -4,6 +4,7 @@ using LibVLCSharp;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.VisualScripting;
 
 ///This is a basic implementation of a media player using VLC for Unity using LibVLCSharp
 ///It exposes some basic playback controls, you may wish to add more of these
@@ -39,35 +40,48 @@ public class VLCPlayerExample : MonoBehaviour
 
 	//Unity Awake, OnDestroy, and Update functions
 	#region unity
+
+	private bool hasLoaded = false;
 	void Awake()
 	{
-		//Setup LibVLC
-		if (libVLC == null)
-			CreateLibVLC();
-
-		//Setup Screen
-		if (screen == null)
-			screen = GetComponent<Renderer>();
-		if (canvasScreen == null)
-			canvasScreen = GetComponent<RawImage>();
-
-		//Setup Media Player
-		CreateMediaPlayer();
-
-		//Play On Start
-		if (playOnAwake)
-			Open();
-
+		StartCoroutine(StartVideo());
 	}
+
+    IEnumerator StartVideo()
+	{
+        yield return null;
+        //Setup LibVLC
+        if (libVLC == null)
+            CreateLibVLC();
+        yield return null;
+        //Setup Screen
+        if (screen == null)
+            screen = GetComponent<Renderer>();
+        if (canvasScreen == null)
+            canvasScreen = GetComponent<RawImage>();
+        yield return null;
+        //Setup Media Player
+        CreateMediaPlayer();
+        yield return null;
+        //Play On Start
+        if (playOnAwake)
+            Open();
+		hasLoaded = true;
+		yield return null;
+    }
 
     void OnDestroy()
 	{
-		//Dispose of mediaPlayer, or it will stay in nemory and keep playing audio
 		DestroyMediaPlayer();
-	}
-	
-	void Update()
+        //Dispose of mediaPlayer, or it will stay in nemory and keep playing audio
+        //StartCoroutine(DestoryMediaPlayerAsync());
+    }
+
+	public void DestoryVLCPlayer() => StartCoroutine(DestoryMediaPlayerAsync());
+
+    void Update()
 	{
+		if (!hasLoaded) return;
 		//Get size every frame
 		uint height = 0;
 		uint width = 0;
@@ -286,11 +300,28 @@ public class VLCPlayerExample : MonoBehaviour
 	//Dispose of the MediaPlayer object.
 	void DestroyMediaPlayer()
 	{
-		Log("VLCPlayerExample DestroyMediaPlayer");
+        hasLoaded = false;
+        Log("VLCPlayerExample DestroyMediaPlayer");
 		mediaPlayer?.Stop();
 		mediaPlayer?.Dispose();
 		mediaPlayer = null;
 	}
+
+	private IEnumerator DestoryMediaPlayerAsync()
+	{
+        hasLoaded = false;
+        yield return null;
+        Debug.Log("VLCPlayerExample DestroyMediaPlayer");
+		yield return null;
+        mediaPlayer?.Stop();
+        yield return null;
+        mediaPlayer?.Dispose();
+        
+        mediaPlayer = null;
+        yield return null;
+        Destroy(transform.parent.parent.parent.gameObject);
+
+    }
 
 	//Resize the output textures to the size of the video
 	void ResizeOutputTextures(uint px, uint py)
