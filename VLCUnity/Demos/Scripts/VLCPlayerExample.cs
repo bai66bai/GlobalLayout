@@ -3,6 +3,7 @@ using System;
 using LibVLCSharp;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 ///This is a basic implementation of a media player using VLC for Unity using LibVLCSharp
 ///It exposes some basic playback controls, you may wish to add more of these
@@ -56,14 +57,15 @@ public class VLCPlayerExample : MonoBehaviour
 		//Play On Start
 		if (playOnAwake)
 			Open();
+
 	}
 
-	void OnDestroy()
+    void OnDestroy()
 	{
 		//Dispose of mediaPlayer, or it will stay in nemory and keep playing audio
 		DestroyMediaPlayer();
 	}
-
+	
 	void Update()
 	{
 		//Get size every frame

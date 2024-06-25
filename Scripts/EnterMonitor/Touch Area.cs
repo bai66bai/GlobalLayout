@@ -41,18 +41,12 @@ public class TouchArea : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         {
             if (deltaX > 0)
             {
-                Debug.Log("Right Swipe");
                 swipeDetection.ToRight();
             }
             else
             {
-                Debug.Log("Left Swipe");
                 swipeDetection.ToLeft();
             }
-        }
-        else
-        {
-            Debug.Log("Swipe too short");
         }
     }
 }
