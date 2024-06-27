@@ -774,6 +774,7 @@ GameObject:
   - component: {fileID: 510255405}
   - component: {fileID: 510255406}
   - component: {fileID: 510255407}
+  - component: {fileID: 510255408}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -845,6 +846,19 @@ MonoBehaviour:
   tempObject: {fileID: 1616930935473642071}
   tempObject1: {fileID: 364650046649022867}
   LevelLoader: {fileID: 1122781596}
+  client: {fileID: 1122781599}
+--- !u!114 &510255408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510255404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5872eb38a8dbf4baf633bab322e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667284514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1266,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeoutSeconds: 900
+--- !u!114 &1122781599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4031959607066056227, guid: b67cd987ee8d67741ad86bbbe679eeca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1122781595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122781597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1162526425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1628,7 @@ MonoBehaviour:
   - {fileID: 1616930935473642071}
   Suzhou: {fileID: 364650046649022867}
   Hangzhou: {fileID: 1616930935473642071}
+  client: {fileID: 1122781599}
   IsReleasingSuZhou: 0
   IsReleasingHangZhou: 0
 --- !u!1 &1497019753
@@ -2035,6 +2062,7 @@ GameObject:
   - component: {fileID: 2016929355}
   - component: {fileID: 2016929356}
   - component: {fileID: 2016929357}
+  - component: {fileID: 2016929358}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -2106,6 +2134,19 @@ MonoBehaviour:
   tempObject: {fileID: 364650046649022867}
   tempObject1: {fileID: 1616930935473642071}
   LevelLoader: {fileID: 1122781596}
+  client: {fileID: 1122781599}
+--- !u!114 &2016929358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016929354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5872eb38a8dbf4baf633bab322e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2086793261
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class SwipeDetection : MonoBehaviour
     public RectTransform swipeArea;
     public float duration = 0.5f;
     public int MovingDistance = 1920;
-
+    private TCPClient client;
     public Turnthepage Turnthepage;
 
     private bool isFinish = true;
@@ -18,15 +18,16 @@ public class SwipeDetection : MonoBehaviour
     void Start()
     {
         float width = swipeArea.rect.width;
-        bigIndex = (int)width / 1920;
-
+        bigIndex = (int)width / MovingDistance;
+        GameObject LevelLoader = GameObject.Find("LevelLoader");
+        client = LevelLoader.GetComponent<TCPClient>();
     }
 
-   
 
 
     public void ToRight()
     {
+        client.SendMsg($"scroll:right");
         if (nowIndex > 0 && isFinish)
         {
             Vector3 localPostion = transform.localPosition;
@@ -41,6 +42,7 @@ public class SwipeDetection : MonoBehaviour
 
     public void ToLeft()
     {
+        client.SendMsg($"scroll:left");
         if (nowIndex < bigIndex - 1 && isFinish)
         {
             Vector3 localPostion = transform.localPosition;

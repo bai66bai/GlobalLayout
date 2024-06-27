@@ -10,6 +10,10 @@ public class CtrScreenMove : MonoBehaviour
 
     public float duration = 2.0f;
 
+    public int VId;
+
+    private TCPClient client;
+
     private Vector3 targetPosition;
 
     private Vector3 targetLocalScale;
@@ -23,7 +27,16 @@ public class CtrScreenMove : MonoBehaviour
 
     private Vector3 centerLocalScale = new(2.1f, 2.1f, 0f);
 
+    private void Start()
+    {
+        GameObject LevelLoader = GameObject.Find("LevelLoader");
+        client = LevelLoader.GetComponent<TCPClient>();
+    }
 
+    /// <summary>
+    /// 获取到当前点击的画面的index 以及当亲位置缩放
+    /// </summary>
+    /// <param name="name">点击传入的画面名</param>
     public void OnClickScreen(string name)
     {
         if (isInOver && isOutOver)
@@ -32,6 +45,7 @@ public class CtrScreenMove : MonoBehaviour
             {
                 if (t.name == name)
                 {
+                    client.SendMsg($"screenName:{VId}-{name}");
                     selectedIndex = t.GetComponent<ScreenIndex>().Index;
                     targetPosition = t.transform.localPosition;
                     targetLocalScale = t.transform.localScale;
@@ -40,13 +54,13 @@ public class CtrScreenMove : MonoBehaviour
                     FindCenterScreen();
                     t.GetComponent<ScreenIndex>().Index = 0;
                 }
-
             });
         }
-
     }
 
-
+    /// <summary>
+    /// 获取到当前在中心位置的画面并交换index
+    /// </summary>
     public void FindCenterScreen()
     {
         Screens.ForEach(t =>

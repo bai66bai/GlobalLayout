@@ -9,6 +9,8 @@ public class CtrLoadScene : MonoBehaviour
 
     public LevelLoader LevelLoader;
 
+    public TCPClient client;
+
     private bool isLoad = true;
     // Update is called once per frame
     void Update()
@@ -17,14 +19,14 @@ public class CtrLoadScene : MonoBehaviour
         {
             if (isLoad)
             {
-                LevelLoader.LoadNewScene(LoadScene);
+                LevelLoader.LoadNewScene(LoadScene,false);
                 isLoad = false;
             }
         }
     }
     public void StartDestroy(string name)
     {
-        
+       client.SendMsg($"sceneName:{name}");
         VLCPlayerExample[] vLCPlayer1Examples = tempObject1.GetComponentsInChildren<VLCPlayerExample>();
         foreach (var item in vLCPlayer1Examples)
         {

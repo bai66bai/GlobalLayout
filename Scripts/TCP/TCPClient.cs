@@ -1,71 +1,79 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
 
 public class TCPClient : MonoBehaviour
 {
-    private string targetIp = "192.168.3.219";
+    private string targetIp = "192.168.3.13";
     [SerializeField]
     private int targetPort;
 
     private TcpClient client;
     private NetworkStream stream;
+    private Queue<string> messageQueue = new();
+    private bool isProcessing = false;
 
-
-    public void SendMsg(string msg)=> StartCoroutine(SendMessage(msg));
-
-    new IEnumerator SendMessage(string msg)
+    public void SendMsg(string msg)
     {
+        messageQueue.Enqueue(msg);
+        if (!isProcessing)
+        {
+            StartCoroutine(ProcessQueue());
+        }
+    }
 
+    private IEnumerator ProcessQueue()
+    {
+        while (messageQueue.Count > 0)
+        {
+            isProcessing = true;
+            string msg = messageQueue.Dequeue();
+            yield return SendMessage(msg);
+        }
+        isProcessing = false;
+    }
+
+    private new IEnumerator SendMessage(string msg)
+    {
         client = new TcpClient();
         var connect = client.BeginConnect(targetIp, targetPort, null, null);
 
-        // µÈ´ýÁ¬½ÓÍê³É
+        // ç­‰å¾…è¿žæŽ¥å®Œæˆ
         while (!connect.IsCompleted)
             yield return null;
 
-        try
-        {
+   
             client.EndConnect(connect);
             Debug.Log("Connected to server.");
             stream = client.GetStream();
 
-            // ·¢ËÍ³õÊ¼ÏûÏ¢
-            StartCoroutine(SendMessageWithoutConnect(msg));
-        }
-        catch (Exception e)
-        {
-            Debug.Log("Failed to connect: " + e.Message);
-        }
+            // å‘é€åˆå§‹æ¶ˆæ¯
+            yield return SendMessageWithoutConnect(msg);
+    
     }
 
-    
-    // ·â×°·¢ËÍÏûÏ¢µÄ¹¦ÄÜÎªÐ­³Ì
-    IEnumerator SendMessageWithoutConnect(string message)
+    // å°è£…å‘é€æ¶ˆæ¯çš„åŠŸèƒ½ä¸ºåç¨‹
+    private IEnumerator SendMessageWithoutConnect(string message)
     {
         if (stream != null)
         {
             byte[] dataToSend = Encoding.UTF8.GetBytes(message);
 
-            // Òì²½·¢ËÍÏûÏ¢
+            // å¼‚æ­¥å‘é€æ¶ˆæ¯
             var asyncSend = stream.BeginWrite(dataToSend, 0, dataToSend.Length, null, null);
             while (!asyncSend.IsCompleted)
                 yield return null;
-            try
-            {
+  
                 stream.EndWrite(asyncSend);
 
                 Debug.Log("Sent: " + message);
 
-                // ¿ªÊ¼½ÓÊÕÏìÓ¦
-                StartCoroutine(ReceiveMessage());
-            }
-            catch (Exception e)
-            {
-                Debug.Log("Failed to send message: " + e.Message);
-            }
+                // å¼€å§‹æŽ¥æ”¶å“åº”
+                yield return ReceiveMessage();
+
         }
         else
         {
@@ -73,9 +81,8 @@ public class TCPClient : MonoBehaviour
         }
     }
 
-
-    // ½ÓÊÕÏûÏ¢µÄÐ­³Ì
-    IEnumerator ReceiveMessage()
+    // æŽ¥æ”¶æ¶ˆæ¯çš„åç¨‹
+    private IEnumerator ReceiveMessage()
     {
         byte[] receivedBytes = new byte[1024];
 
@@ -84,23 +91,18 @@ public class TCPClient : MonoBehaviour
             yield return null;
         try
         {
-            int numberOfBytesRead = stream.EndRead(asyncReceive);
-            if (numberOfBytesRead > 0)
-            {
-                string receivedMessage = Encoding.UTF8.GetString(receivedBytes, 0, numberOfBytesRead);
-                Debug.Log("Received: " + receivedMessage);
-            }
+            int bytesRead = stream.EndRead(asyncReceive);
+            string receivedMessage = Encoding.UTF8.GetString(receivedBytes, 0, bytesRead);
+            Debug.Log("Received: " + receivedMessage);
+
+            // å…³é—­è¿žæŽ¥
+            stream.Close();
+            client.Close();
+            Debug.Log("Connection closed.");
         }
         catch (Exception e)
         {
             Debug.Log("Failed to receive message: " + e.Message);
         }
-    }
-
-    void OnApplicationQuit()
-    {
-        stream?.Close();
-        client?.Close();
-        Debug.Log("Connection closed.");
     }
 }

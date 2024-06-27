@@ -17,7 +17,7 @@ public class Turnthepage : MonoBehaviour
     private int endIndex;
     private void Start()
     {
-        endIndex = (int) SwipeDetection.swipeArea.rect.width / 1920;
+        endIndex = (int) SwipeDetection.swipeArea.rect.width / SwipeDetection.MovingDistance;
         Lefts = Btns[0].GetComponentsInChildren<Image>();
         Rights = Btns[1].GetComponentsInChildren<Image>();
         changBtn();

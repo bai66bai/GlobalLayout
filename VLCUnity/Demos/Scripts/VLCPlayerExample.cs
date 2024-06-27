@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using Unity.VisualScripting;
+using System.Linq;
 
 ///This is a basic implementation of a media player using VLC for Unity using LibVLCSharp
 ///It exposes some basic playback controls, you may wish to add more of these
@@ -20,6 +21,16 @@ public class VLCPlayerExample : MonoBehaviour
 {
 	public static LibVLC libVLC; //The LibVLC class is mainly used for making MediaPlayer and Media objects. You should only have one LibVLC instance.
 	public MediaPlayer mediaPlayer; //MediaPlayer is the main class we use to interact with VLC
+
+	public bool IsMediaPlaying
+	{
+		get
+		{
+			if(mediaPlayer == null || !mediaPlayer.IsPlaying)
+				return false;
+			else return true;
+		}
+	}
 
 	//Screens
 	public Renderer screen; //Assign a mesh to render on a 3d object
@@ -38,10 +49,15 @@ public class VLCPlayerExample : MonoBehaviour
 
 	public bool logToConsole = false; //Log function calls and LibVLC logs to Unity console
 
-	//Unity Awake, OnDestroy, and Update functions
-	#region unity
+    //Unity Awake, OnDestroy, and Update functions
+    #region unity
+    public bool HasLoaded
+    {
+        get => hasLoaded;
+        private set { }
+    }
 
-	private bool hasLoaded = false;
+    private bool hasLoaded = false;
 	void Awake()
 	{
 		StartCoroutine(StartVideo());
@@ -66,8 +82,11 @@ public class VLCPlayerExample : MonoBehaviour
         //Play On Start
         if (playOnAwake)
             Open();
+		foreach (var _ in Enumerable.Range(0, 10))
+		{
+			yield return null;
+		}
 		hasLoaded = true;
-		yield return null;
     }
 
     void OnDestroy()

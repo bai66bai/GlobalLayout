@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 505278405191795229}
   - component: {fileID: 178397849282956600}
   - component: {fileID: 885221256044231028}
-  - component: {fileID: 2183962339347414353}
-  - component: {fileID: 7251164900796217974}
+  - component: {fileID: 426977041849051870}
   m_Layer: 5
-  m_Name: Picture2
+  m_Name: V1Picture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +99,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &885221256044231028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
---- !u!114 &2183962339347414353
+--- !u!114 &426977041849051870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,39 +122,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 127484812707682217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7007092261857304557}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture2
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &7251164900796217974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127484812707682217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 7007092261857304557}
 --- !u!1 &127955616535615640
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,10 +283,9 @@ GameObject:
   - component: {fileID: 5046871637072698755}
   - component: {fileID: 4930906184904229729}
   - component: {fileID: 4997557505786700671}
-  - component: {fileID: 8147614989785924770}
-  - component: {fileID: 4809423145203632365}
+  - component: {fileID: 6083672240556441207}
   m_Layer: 5
-  m_Name: Picture3
+  m_Name: V3Picture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,6 +369,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &4997557505786700671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
---- !u!114 &8147614989785924770
+--- !u!114 &6083672240556441207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,39 +392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 447292103182266800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404181873904014441}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture3
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &4809423145203632365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447292103182266800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 404181873904014441}
 --- !u!1 &476376937915057571
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,10 +553,9 @@ GameObject:
   - component: {fileID: 6806212461859815515}
   - component: {fileID: 7853122689841992399}
   - component: {fileID: 7757489078684080385}
-  - component: {fileID: 6956995120501670151}
-  - component: {fileID: 7474834222762494008}
+  - component: {fileID: 2977944743767215074}
   m_Layer: 5
-  m_Name: Picture5
+  m_Name: V2Picture5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,6 +639,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &7757489078684080385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
---- !u!114 &6956995120501670151
+--- !u!114 &2977944743767215074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -720,39 +662,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 730180977767566147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1589703243704610050}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture5
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &7474834222762494008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730180977767566147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 1589703243704610050}
 --- !u!1 &853093135797826460
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,10 +858,9 @@ GameObject:
   - component: {fileID: 907650304908715722}
   - component: {fileID: 7956131753174635653}
   - component: {fileID: 6811633807389689975}
-  - component: {fileID: 1519148873199238594}
-  - component: {fileID: 1430018735752020682}
+  - component: {fileID: 3872740534475896040}
   m_Layer: 5
-  m_Name: Picture5
+  m_Name: V1Picture5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,6 +944,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &6811633807389689975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,7 +958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
---- !u!114 &1519148873199238594
+--- !u!114 &3872740534475896040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1054,39 +967,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1283313460873106477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7007092261857304557}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture5
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1430018735752020682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283313460873106477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 7007092261857304557}
 --- !u!1 &1387422143442629905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,10 +1056,9 @@ GameObject:
   - component: {fileID: 5608258940466333933}
   - component: {fileID: 2104847660382058242}
   - component: {fileID: 7390730233003866402}
-  - component: {fileID: 771987212545825396}
-  - component: {fileID: 8728393457300941813}
+  - component: {fileID: 8659046655767804955}
   m_Layer: 5
-  m_Name: Picture3
+  m_Name: V2Picture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,6 +1142,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &7390730233003866402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,7 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
---- !u!114 &771987212545825396
+--- !u!114 &8659046655767804955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1281,39 +1165,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1393909505251375435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1589703243704610050}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture3
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &8728393457300941813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393909505251375435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 1589703243704610050}
 --- !u!1 &1407106758925152610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1229,7 @@ MonoBehaviour:
   - {fileID: 7866045324136511036}
   - {fileID: 1283313460873106477}
   duration: 0
+  VId: 4
 --- !u!1 &1561874727147354530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,10 +1534,9 @@ GameObject:
   - component: {fileID: 8394358637831605892}
   - component: {fileID: 4292465849496415308}
   - component: {fileID: 2000623732423885373}
-  - component: {fileID: 6973076574863179947}
-  - component: {fileID: 3040351214733575747}
+  - component: {fileID: 3513135310528138410}
   m_Layer: 5
-  m_Name: Picture4
+  m_Name: V3Picture4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,6 +1620,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &2000623732423885373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,7 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
---- !u!114 &6973076574863179947
+--- !u!114 &3513135310528138410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1787,39 +1643,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3781048533555530076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404181873904014441}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture4
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &3040351214733575747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3781048533555530076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 404181873904014441}
 --- !u!1 &4001960228462490157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1670,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4001960228462490157}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1854,7 +1681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4018161575102855885
@@ -1917,6 +1744,7 @@ MonoBehaviour:
   - {fileID: 3781048533555530076}
   - {fileID: 6326791073514556081}
   duration: 0
+  VId: 6
 --- !u!1 &5408140299923806828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,10 +1830,9 @@ GameObject:
   - component: {fileID: 1456150980345698281}
   - component: {fileID: 6925316075070954296}
   - component: {fileID: 9056724860918123461}
-  - component: {fileID: 9083066106767179101}
-  - component: {fileID: 9153729519942029112}
+  - component: {fileID: 4827002249113655936}
   m_Layer: 5
-  m_Name: Picture2
+  m_Name: V2Picture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2089,6 +1916,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &9056724860918123461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2102,7 +1930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
---- !u!114 &9083066106767179101
+--- !u!114 &4827002249113655936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2111,39 +1939,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5444864625590516089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1589703243704610050}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture2
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &9153729519942029112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5444864625590516089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 1589703243704610050}
 --- !u!1 &5795029518130687422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,10 +2031,9 @@ GameObject:
   - component: {fileID: 9182522081923860665}
   - component: {fileID: 8790611292505259087}
   - component: {fileID: 5894666300629467140}
-  - component: {fileID: 7763149127765447804}
-  - component: {fileID: 1388883078343971777}
+  - component: {fileID: 5280965009106464718}
   m_Layer: 5
-  m_Name: Picture1
+  m_Name: V3Picture1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2319,6 +2117,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &5894666300629467140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,7 +2131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
---- !u!114 &7763149127765447804
+--- !u!114 &5280965009106464718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2341,39 +2140,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5919985102996071792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404181873904014441}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture1
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1388883078343971777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5919985102996071792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 404181873904014441}
 --- !u!1 &5925467523615350991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,10 +2304,9 @@ GameObject:
   - component: {fileID: 7028700148029808119}
   - component: {fileID: 7257983200259390392}
   - component: {fileID: 1379847755205849422}
-  - component: {fileID: 6156829738016632427}
-  - component: {fileID: 7471336568916244732}
+  - component: {fileID: 3414218004373751922}
   m_Layer: 5
-  m_Name: Picture5
+  m_Name: V3Picture5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2621,6 +2390,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &1379847755205849422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,7 +2404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 4
---- !u!114 &6156829738016632427
+--- !u!114 &3414218004373751922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2643,39 +2413,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6326791073514556081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404181873904014441}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture5
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &7471336568916244732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6326791073514556081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 404181873904014441}
 --- !u!1 &6417002996370952921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,10 +2612,9 @@ GameObject:
   - component: {fileID: 181767878729624053}
   - component: {fileID: 6807730207880775276}
   - component: {fileID: 3737991852739447425}
-  - component: {fileID: 1939499957452555448}
-  - component: {fileID: 5050223490895623936}
+  - component: {fileID: 5174476483937080381}
   m_Layer: 5
-  m_Name: Picture2
+  m_Name: V3Picture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2958,6 +2698,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &3737991852739447425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2971,7 +2712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 1
---- !u!114 &1939499957452555448
+--- !u!114 &5174476483937080381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2980,39 +2721,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6512848402879461011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 404181873904014441}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture2
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &5050223490895623936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6512848402879461011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 404181873904014441}
 --- !u!1 &6656114790003578394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,10 +2738,9 @@ GameObject:
   - component: {fileID: 8013826393197325757}
   - component: {fileID: 5219130289402054256}
   - component: {fileID: 4720047428771473256}
-  - component: {fileID: 5955832105497929884}
-  - component: {fileID: 6378663347774319835}
+  - component: {fileID: 2057587573905214837}
   m_Layer: 5
-  m_Name: Picture1
+  m_Name: V2Picture1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3113,6 +2824,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &4720047428771473256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3126,7 +2838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
---- !u!114 &5955832105497929884
+--- !u!114 &2057587573905214837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3135,39 +2847,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6656114790003578394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1589703243704610050}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture1
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &6378663347774319835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6656114790003578394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 1589703243704610050}
 --- !u!1 &6746420528332617274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,10 +3064,9 @@ GameObject:
   - component: {fileID: 1043994889526323499}
   - component: {fileID: 8721644273290367784}
   - component: {fileID: 4093552918899498483}
-  - component: {fileID: 5040101051071054134}
-  - component: {fileID: 928421690778437105}
+  - component: {fileID: 693914391485123660}
   m_Layer: 5
-  m_Name: Picture3
+  m_Name: V1Picture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3468,6 +3150,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &4093552918899498483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,7 +3164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 2
---- !u!114 &5040101051071054134
+--- !u!114 &693914391485123660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3490,39 +3173,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7160436174478050920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7007092261857304557}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture3
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &928421690778437105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7160436174478050920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 7007092261857304557}
 --- !u!1 &7276391976573445028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,10 +3262,9 @@ GameObject:
   - component: {fileID: 5088821427082298477}
   - component: {fileID: 1388771432058658947}
   - component: {fileID: 6174597546319967606}
-  - component: {fileID: 4601986815588282592}
-  - component: {fileID: 996437084475037494}
+  - component: {fileID: 820836019324045226}
   m_Layer: 5
-  m_Name: Picture4
+  m_Name: V1Picture4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3695,6 +3348,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &6174597546319967606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,7 +3362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
---- !u!114 &4601986815588282592
+--- !u!114 &820836019324045226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3717,39 +3371,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7866045324136511036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7007092261857304557}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture4
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &996437084475037494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7866045324136511036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 7007092261857304557}
 --- !u!1 &7994455286144238391
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,10 +3460,9 @@ GameObject:
   - component: {fileID: 8596589512399949257}
   - component: {fileID: 3132027423540352452}
   - component: {fileID: 7561775039454774855}
-  - component: {fileID: 642047369338875842}
-  - component: {fileID: 3235554448304568389}
+  - component: {fileID: 8064990931045087138}
   m_Layer: 5
-  m_Name: Picture4
+  m_Name: V2Picture4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3922,6 +3546,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &7561775039454774855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,7 +3560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 3
---- !u!114 &642047369338875842
+--- !u!114 &8064990931045087138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3944,39 +3569,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8121993136479493885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1589703243704610050}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture4
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &3235554448304568389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8121993136479493885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 1589703243704610050}
 --- !u!1 &8603575964837831461
 GameObject:
   m_ObjectHideFlags: 0
@@ -4037,6 +3633,7 @@ MonoBehaviour:
   - {fileID: 8121993136479493885}
   - {fileID: 730180977767566147}
   duration: 0
+  VId: 5
 --- !u!1 &8617442935926086120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,10 +3701,9 @@ GameObject:
   - component: {fileID: 4260586075902884654}
   - component: {fileID: 5949230883730511741}
   - component: {fileID: 6464737971302334269}
-  - component: {fileID: 4943250026628212196}
-  - component: {fileID: 1310009853345337322}
+  - component: {fileID: 612331928483083157}
   m_Layer: 5
-  m_Name: Picture1
+  m_Name: V1Picture1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4191,6 +3787,7 @@ MonoBehaviour:
   flipTextureY: 1
   playOnAwake: 1
   logToConsole: 0
+  HasDestroyed: 0
 --- !u!114 &6464737971302334269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4204,7 +3801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
---- !u!114 &4943250026628212196
+--- !u!114 &612331928483083157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4213,39 +3810,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8782733918027939678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 287f3da0af3f6c84abfdc1cdc0b91f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7007092261857304557}
-          m_TargetAssemblyTypeName: CtrScreenMove, Assembly-CSharp
-          m_MethodName: OnClickScreen
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Picture1
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1310009853345337322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8782733918027939678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 6591989202338995164}
+  CtrScreenMove: {fileID: 7007092261857304557}
 --- !u!1 &9145422412343276291
 GameObject:
   m_ObjectHideFlags: 0

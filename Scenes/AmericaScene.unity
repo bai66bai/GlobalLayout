@@ -724,7 +724,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283496316}
-  - component: {fileID: 283496317}
   m_Layer: 5
   m_Name: Btn
   m_TagString: Untagged
@@ -753,35 +752,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.0174, y: 123.46518}
   m_SizeDelta: {x: 405.7897, y: 135.2061}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &283496317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283496315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1790909542}
-          m_TargetAssemblyTypeName: CtrAllBtn, Assembly-CSharp
-          m_MethodName: ClickBtn
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: California
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &296534881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 153}
+  m_AnchoredPosition: {x: 32.6, y: 178.1}
   m_SizeDelta: {x: 398.2328, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454251400
@@ -1214,7 +1184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4FE1\u8FBE\u751F\u7269\u9A6C\u91CC\u5170\u5DDE\u7814\u53D1\u4E2D\u5FC3"
+  m_text: "\u4FE1\u8FBE\u751F\u7269\u5236\u836F(\u7F8E\u56FD)\u516C\u53F8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
@@ -1242,8 +1212,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 22.41
+  m_fontSizeBase: 22.41
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1252,7 +1222,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 3.4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1402,7 +1372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.00012, y: 0}
+  m_AnchoredPosition: {x: 402, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &530086552
@@ -3219,7 +3189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.79, y: 78}
+  m_AnchoredPosition: {x: -46.2, y: 124.9}
   m_SizeDelta: {x: 234.6528, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078957485
@@ -3242,7 +3212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6838\u5FC3\u4E1A\u52A1\uFF1A\u521B\u65B0\u836F\u7269\u7814\u53D1"
+  m_text: "\u6838\u5FC3\u4E1A\u52A1: \u521B\u65B0\u836F\u7269\u7814\u53D1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbaa9ab2d32f2074bac7f3e1f3e07ff7, type: 2}
   m_sharedMaterial: {fileID: -3370745573457406905, guid: dbaa9ab2d32f2074bac7f3e1f3e07ff7,
@@ -3270,8 +3240,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 13.7
+  m_fontSizeBase: 13.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3846,7 +3816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1207495245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3866,7 +3836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.00012, y: 0}
+  m_AnchoredPosition: {x: 402, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1273974875
@@ -4527,7 +4497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402.00012, y: 0}
+  m_AnchoredPosition: {x: 402, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1456903894
@@ -4719,7 +4689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f36aec99a2fb78a44ac8a5bc353912c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b71fe48b1d158b4596dffab0f9faecf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4906,7 +4876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.199, y: 118.9}
+  m_AnchoredPosition: {x: -34.599, y: 158.3}
   m_SizeDelta: {x: 263.8341, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476474236
@@ -4929,7 +4899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Innovent Global R&D Center
+  m_text: Innovent Biologics(U.S.A)Co., Ltd
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d31ff1b90f4e0a4e9b6c21a5da4bc05, type: 2}
   m_sharedMaterial: {fileID: 9136265757710820783, guid: 4d31ff1b90f4e0a4e9b6c21a5da4bc05,
@@ -4957,8 +4927,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15.6
+  m_fontSizeBase: 15.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7080,8 +7050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6943, y: -151.27919}
-  m_SizeDelta: {x: 355.5896, y: 214.7516}
+  m_AnchoredPosition: {x: 2.2039, y: -113}
+  m_SizeDelta: {x: 359.9973, y: 214.7516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092882096
 MonoBehaviour:

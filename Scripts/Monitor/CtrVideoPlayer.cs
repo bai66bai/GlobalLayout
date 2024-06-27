@@ -7,6 +7,8 @@ public class CtrVideoPlayer : MonoBehaviour
     public VideoPlayer videoPlayer; // 视频播放器组件
     public GameObject controlButton;    // 控制播放暂停的按钮
 
+    public TCPClient client;
+
     private bool isPlaying = false; // 当前播放状态
 
     void Start()
@@ -25,10 +27,12 @@ public class CtrVideoPlayer : MonoBehaviour
     {
         if (isPlaying)
         {
+            client.SendMsg($"touchScreen:togglePlay");
             videoPlayer.Pause();
         }
         else
         {
+            client.SendMsg($"touchScreen:togglePlay");
             videoPlayer.Play();
         }
         isPlaying = !isPlaying;
