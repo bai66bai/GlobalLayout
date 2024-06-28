@@ -2401,10 +2401,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1839817041}
-  - {fileID: 306639350}
-  - {fileID: 1456903895}
   - {fileID: 1583413228}
   - {fileID: 1083908833}
+  - {fileID: 306639350}
+  - {fileID: 1456903895}
   - {fileID: 1927509686}
   m_Father: {fileID: 1650303025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2448,7 +2448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -707, y: -432}
+  m_AnchoredPosition: {x: 852, y: -467}
   m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306639351
@@ -2476,7 +2476,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.53333336}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7437,6 +7437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  fadeDuration: 0.3
   client: {fileID: 1186539806}
 --- !u!114 &1114762858
 MonoBehaviour:
@@ -7875,6 +7876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  fadeDuration: 0.3
   client: {fileID: 1186539806}
 --- !u!114 &1229930904
 MonoBehaviour:
@@ -8758,6 +8760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  fadeDuration: 0.3
   client: {fileID: 1186539806}
 --- !u!114 &1352831920
 MonoBehaviour:
@@ -9640,7 +9643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -787.0001, y: -432}
+  m_AnchoredPosition: {x: 771.9999, y: -467}
   m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456903896
@@ -10825,6 +10828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  fadeDuration: 0.3
   client: {fileID: 1186539806}
 --- !u!114 &1558690232
 MonoBehaviour:
@@ -15527,6 +15531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.2
+  fadeDuration: 0.3
   client: {fileID: 1186539806}
 --- !u!114 &2092882097
 MonoBehaviour:

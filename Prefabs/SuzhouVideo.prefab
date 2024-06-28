@@ -1038,7 +1038,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 3990155541230892341}
   texture: {fileID: 0}
-  path: rtmp://liteavapp.qcloud.com/live/liteavdemoplayerstreamid
+  path: https://media.w3.org/2010/05/sintel/trailer.mp4
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 4745668389080908502}
   texture: {fileID: 0}
-  path: rtmp://liteavapp.qcloud.com/live/liteavdemoplayerstreamid
+  path: http://vjs.zencdn.net/v/oceans.mp4
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1
@@ -2941,7 +2941,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 565114045446669164}
   texture: {fileID: 0}
-  path: rtmp://liteavapp.qcloud.com/live/liteavdemoplayerstreamid
+  path: http://www.w3school.com.cn/i/movie.mp4
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 846427930863063224}
   texture: {fileID: 0}
-  path: rtmp://liteavapp.qcloud.com/live/liteavdemoplayerstreamid
+  path: http://www.w3school.com.cn/i/movie.mp4
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1
@@ -3193,7 +3193,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 5698477885237764921}
   texture: {fileID: 0}
-  path: rtmp://liteavapp.qcloud.com/live/liteavdemoplayerstreamid
+  path: https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/hls/xgplayer-demo.m3u8
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1

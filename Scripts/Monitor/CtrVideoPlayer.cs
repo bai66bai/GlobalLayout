@@ -11,16 +11,19 @@ public class CtrVideoPlayer : MonoBehaviour
 
     private bool isPlaying = false; // 当前播放状态
 
+    private GameObject pause;
+
     void Start()
     {
         if (videoPlayer == null)
         {
             videoPlayer = GetComponent<VideoPlayer>();
         }
-
+        pause = GameObject.Find("Pause");
         // 确保视频一开始是暂停的
         videoPlayer.Pause();
         isPlaying = false;
+
     }
 
     public void TogglePlayPause()
@@ -36,5 +39,12 @@ public class CtrVideoPlayer : MonoBehaviour
             videoPlayer.Play();
         }
         isPlaying = !isPlaying;
+        PauseBtn(!isPlaying);
+    }
+
+
+    private void PauseBtn(bool state)
+    {
+        pause.SetActive(state);
     }
 }
