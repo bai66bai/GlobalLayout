@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,6 +40,7 @@ public class LevelLoader : MonoBehaviour
 
         // 播放动画
         animator.SetTrigger("StartTrigger");
+    
 
         // 等待动画播放完成
         yield return new WaitForSeconds(transitionTime);

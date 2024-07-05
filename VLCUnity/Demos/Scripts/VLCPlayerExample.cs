@@ -21,7 +21,7 @@ public class VLCPlayerExample : MonoBehaviour
 {
 	public static LibVLC libVLC; //The LibVLC class is mainly used for making MediaPlayer and Media objects. You should only have one LibVLC instance.
 	public MediaPlayer mediaPlayer; //MediaPlayer is the main class we use to interact with VLC
-
+	public bool isNeedAwakeStart = true;
 	public bool IsMediaPlaying
 	{
 		get
@@ -60,8 +60,11 @@ public class VLCPlayerExample : MonoBehaviour
     private bool hasLoaded = false;
 	void Awake()
 	{
-		StartCoroutine(StartVideo());
+		if (isNeedAwakeStart)
+			StartCoroutine(StartVideo());
 	}
+
+	public void StartVideoWithUrlAsync(string url)=> StartVideoWithUrl(url);
 
     IEnumerator StartVideo()
 	{
@@ -87,6 +90,38 @@ public class VLCPlayerExample : MonoBehaviour
 			yield return null;
 		}
 		hasLoaded = true;
+
+    }
+
+	public void StrartVideo(string url)
+	{
+		StartCoroutine(StartVideoWithUrl(url));
+    }
+
+    IEnumerator StartVideoWithUrl(string url)
+    {
+        yield return null;
+        //Setup LibVLC
+        if (libVLC == null)
+            CreateLibVLC();
+        yield return null;
+        //Setup Screen
+        if (screen == null)
+            screen = GetComponent<Renderer>();
+        if (canvasScreen == null)
+            canvasScreen = GetComponent<RawImage>();
+        yield return null;
+        //Setup Media Player
+        CreateMediaPlayer();
+        yield return null;
+        //Play On Start
+        if (playOnAwake)
+            OpenUrl(url);
+        foreach (var _ in Enumerable.Range(0, 10))
+        {
+            yield return null;
+        }
+        hasLoaded = true;
     }
 
     void OnDestroy()
@@ -147,7 +182,18 @@ public class VLCPlayerExample : MonoBehaviour
 		Play();
 	}
 
-	public void Play()
+    public void OpenUrl(string url)
+    {
+        Log("VLCPlayerExample Open");
+        if (mediaPlayer.Media != null)
+            mediaPlayer.Media.Dispose();
+
+        var trimmedPath = url.Trim(new char[] { '"' });//Windows likes to copy paths with quotes but Uri does not like to open them
+        mediaPlayer.Media = new Media(new Uri(trimmedPath));
+        Play();
+    }
+
+    public void Play()
 	{
 		Log("VLCPlayerExample Play");
 
@@ -312,7 +358,7 @@ public class VLCPlayerExample : MonoBehaviour
 			DestroyMediaPlayer();
 		}
 		mediaPlayer = new MediaPlayer(libVLC);
-	}
+    }
 
 	public bool HasDestroyed = false;
 

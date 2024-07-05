@@ -19,7 +19,6 @@ public class CtrBtnChange : MonoBehaviour
 
     public GameObject Label;
  
-
     public Vector2 UnSelectedtLocalScale = new(0.4f, 0.6f);
 
     private Vector2 selectedtLocalScale;
@@ -38,8 +37,8 @@ public class CtrBtnChange : MonoBehaviour
     {
 
         Btn = transform.Find("Btn");
-        selectedtLocalScale = Btn.transform.localScale;
-        selectedtLocalPosition = Btn.transform.localPosition;
+        selectedtLocalScale = Btn.localScale;
+        selectedtLocalPosition = Btn.localPosition;
         targetLocalPosition = new(Btn.localPosition.x, TargetY, 0);
         Labels = Label.GetComponentsInChildren<Image>();
     }
@@ -50,9 +49,10 @@ public class CtrBtnChange : MonoBehaviour
     {
         SelectedText.enabled = true;
         UnSelectedText.enabled = false;
-        Labels[0].enabled = true;
-        Labels[1].enabled = false;
+        Labels[0].enabled = false;
+        Labels[1].enabled = true;
         isFinish = true;
+        //float time = isEnd ? duration : SwitchingTime;
         StartCoroutine(ChangeBtnActive(selectedtLocalScale, selectedtLocalPosition, SwitchingTime));
     }
 

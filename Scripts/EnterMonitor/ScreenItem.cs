@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class ScreenItem : MonoBehaviour, IPointerClickHandler
 {
    public CtrScreenMove CtrScreenMove;
-    private string name;
+    private new string name;
     private void Start()
     {
         name = transform.name;

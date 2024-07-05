@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +16,7 @@ public class SceneIdle : MonoBehaviour
     void Update()
     {
         // 检查是否有键盘输入或鼠标移动
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space))
         {
             ResetTimer();
         }
@@ -33,7 +31,7 @@ public class SceneIdle : MonoBehaviour
                 GameObject[] rootObjects = targetScene.GetRootGameObjects();
                 foreach (GameObject obj in rootObjects)
                 {
-                    if(obj.name =="MainObj")
+                    if (obj.name == "MainObj")
                         obj.SetActive(true);
                 }
             }
@@ -53,10 +51,7 @@ public class SceneIdle : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        ResetTimer();
-    }
+    private void OnEnable() => ResetTimer();
 
     // 重置计时器
     void ResetTimer()
