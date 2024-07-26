@@ -20,6 +20,7 @@ public class CtrBtn : MonoBehaviour
     public TCPClient client;
 
     private Color baseColor = new(1f, 1f, 1f, 0.5f);
+
     private Color baseTextColor = new(8 / 255f, 64 / 255f, 248 / 255f, 0.5f);
 
     private Color selectedColor = new(8 / 255f, 64 / 255f, 248 / 255f, 1f);

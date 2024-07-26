@@ -14,11 +14,13 @@ public class CtrContentActive : MonoBehaviour
 
     private Vector3 EndPosition = new Vector3(0f, 0f, 0f);
 
+    public bool IsMoveEnd = false;
 
     void OnEnable()
     {
         StartMove();
-
+        IsMoveEnd = false;
+        CtrPopupWiindow.IsFinish = false;
     }
 
     public void StartMove()
@@ -28,7 +30,7 @@ public class CtrContentActive : MonoBehaviour
     }
 
 
-    // 定义协程
+    // 定义协程间隔
     IEnumerator ExecuteRepeatedly()
     {
         float actionTime = 0f;
@@ -44,7 +46,7 @@ public class CtrContentActive : MonoBehaviour
         }
     }
 
-
+    //控制内容移动
     IEnumerator MoveObject(Transform obj, Vector3 targetPos)
     {
         Vector3 startPos = obj.localPosition;
@@ -60,6 +62,10 @@ public class CtrContentActive : MonoBehaviour
             yield return null;
         }
         obj.localPosition = targetPos; // 确保最后位置精确
+        if(Contents.IndexOf(obj) == Contents.Count - 1)
+        {
+            IsMoveEnd = true;
+        }
     }
 
 

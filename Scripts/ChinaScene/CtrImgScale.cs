@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CtrImgScale : MonoBehaviour
@@ -14,6 +15,8 @@ public class CtrImgScale : MonoBehaviour
     public float fadeDuration = 0.3f;
 
     public TCPClient client;
+
+    public EventTrigger CtrlImage;
 
     private Vector2 targetSize = new(1066f, 600f);
 
@@ -34,7 +37,7 @@ public class CtrImgScale : MonoBehaviour
     private Button MenuBtn;
 
     private string cityName;
-
+    private bool isCoroutineRunning = false;
     private void Start()
     {
         cityName = transform.parent.parent.name;
@@ -52,31 +55,37 @@ public class CtrImgScale : MonoBehaviour
         Menu = GameObject.Find("Menu").GetComponent<Image>();
         BackBtn = GameObject.Find("Back").GetComponent<Button>();
         MenuBtn = GameObject.Find("Menu").GetComponent<Button>();
+        
     }
 
     public void OnClick()
     {
-        DisableBtn(isZoomed);
-        if (isZoomed)
+        if (!isCoroutineRunning)
         {
-            client.SendMsg($"small:{cityName}");
-            StartCoroutine(AnimateZoom(originalPosition, originalSize));
-        }
-        else
-        {
-            client.SendMsg($"big:{cityName}");
-            originalPosition = rectTransform.position; //保存初始位置
-            StartCoroutine(AnimateZoom(targetPosition, targetSize));
-        }
+            isCoroutineRunning = true;
+            DisableBtn(isZoomed);
+            if (isZoomed)
+            {
+                     client.SendMsg($"small:{cityName}");
+                    StartCoroutine(AnimateZoom(originalPosition, originalSize));
+                    CtrlImage.enabled = true;
+            }
+            else
+            {
+                    client.SendMsg($"big:{cityName}");
+                    originalPosition = rectTransform.position; //保存初始位置
+                    StartCoroutine(AnimateZoom(targetPosition, targetSize));
+                    CtrlImage.enabled = false;
 
-        // 切换状态
-        isZoomed = !isZoomed;
+            }
+    // 切换状态
+            isZoomed = !isZoomed;
+            }
     }
 
-
-    private IEnumerator AnimateZoom( Vector2 targetPosition, Vector2 targetSize)
+    private IEnumerator AnimateZoom( Vector2 targetPos, Vector2 tarSize)
     {
-      
+        CtrBtnChange.IsFinish = false;
         Vector2 startPosition = rectTransform.position;
         Vector2 startSize = rectTransform.sizeDelta;
         float elapsedTime = 0f;
@@ -84,27 +93,27 @@ public class CtrImgScale : MonoBehaviour
         while (elapsedTime < duration)
         {
             float t = elapsedTime / duration;  
-            rectTransform.position = Vector2.Lerp(startPosition, targetPosition, t);
-            rectTransform.sizeDelta = Vector2.Lerp(startSize, targetSize, t);
-            elapsedTime += Time.deltaTime;
+            rectTransform.position = Vector2.Lerp(startPosition, targetPos, t);
+            rectTransform.sizeDelta = Vector2.Lerp(startSize, tarSize, t);
+            elapsedTime += Time.smoothDeltaTime;
             yield return null;
         }
         // 确保最终值
-        rectTransform.position = targetPosition;
-        rectTransform.sizeDelta = targetSize;
+        rectTransform.position = targetPos;
+        rectTransform.sizeDelta = tarSize;
+        isCoroutineRunning = false;
+        CtrBtnChange.IsFinish = true;
     }
-
+    /// <summary>
+    /// 控制按钮的显示隐藏
+    /// </summary>
+    /// <param name="isActive">显示或隐藏</param>
     private void DisableBtn(bool isActive)
     {
         BackBtn.interactable = isActive;
         MenuBtn.interactable = isActive;
         StartCoroutine(FadeOutCoroutine(isActive));
     }
-
-   
-        
-  
-
 
     IEnumerator FadeOutCoroutine(bool isShow)
     {

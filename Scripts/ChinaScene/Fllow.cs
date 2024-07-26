@@ -6,13 +6,7 @@ public class Fllow : MonoBehaviour
 {
     public List<GameObject> Regions;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //保持按钮原大小
     void Update()
     {
         var parentScale = transform.parent.localScale;
@@ -22,4 +16,6 @@ public class Fllow : MonoBehaviour
             e.transform.localScale = targetScale;
         });
     }
+
+
 }

@@ -783,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 5350718619464367371}
   texture: {fileID: 0}
@@ -909,6 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 1422482278230908519}
   texture: {fileID: 0}
@@ -1035,6 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 3990155541230892341}
   texture: {fileID: 0}
@@ -1233,6 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 7474915303013823218}
   texture: {fileID: 0}
@@ -1359,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 1636234140671364747}
   texture: {fileID: 0}
@@ -1629,6 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 8681903793147948285}
   texture: {fileID: 0}
@@ -1827,6 +1833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 4745668389080908502}
   texture: {fileID: 0}
@@ -2025,6 +2032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 244261610671757361}
   texture: {fileID: 0}
@@ -2668,6 +2676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 1267084377889053419}
   texture: {fileID: 0}
@@ -2938,6 +2947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 565114045446669164}
   texture: {fileID: 0}
@@ -3064,6 +3074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 846427930863063224}
   texture: {fileID: 0}
@@ -3190,6 +3201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 5698477885237764921}
   texture: {fileID: 0}
@@ -3388,6 +3400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 693436682088866552}
   texture: {fileID: 0}
@@ -3650,6 +3663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 2353481652124938399}
   texture: {fileID: 0}
@@ -3776,6 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 5343065798251234498}
   texture: {fileID: 0}

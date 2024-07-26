@@ -14,6 +14,7 @@ public class CtrVideo : MonoBehaviour
 
     void Start()
     {
+        //释放RenderTexture视频素材
         RenderTexture.Release();
 
         if (videoPlayer == null)
@@ -21,23 +22,14 @@ public class CtrVideo : MonoBehaviour
             videoPlayer = GetComponent<VideoPlayer>();
         }
 
-        // 注册loopPointReached事件的监听器
+        // 注册loopPointReached事件的监听器是否播放完成
         videoPlayer.loopPointReached += OnVideoFinished;
 
     }
-
-      public void OnLodeScene()
-        {
-        GameObject.SetActive(true);
-    }
-    void OnVideoFinished(VideoPlayer vp)
-    {
-        // 切换到下一个场景
-        SceneManager.LoadScene(nextSceneName);  
-    }
-
-    private void OnDisable()
-    {
-        RenderTexture.Release();
-    }
+      //播放视频
+      public void OnLodeScene() => GameObject.SetActive(true);   
+    // 播放完成切换到下一个场景
+    void OnVideoFinished(VideoPlayer vp) => SceneManager.LoadScene(nextSceneName);
+    
+    private void OnDisable() => RenderTexture.Release();
 }

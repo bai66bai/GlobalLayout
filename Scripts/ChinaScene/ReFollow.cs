@@ -5,6 +5,7 @@ public class ReFollow : MonoBehaviour
     public Transform Text;
     public Transform Text1;
 
+    //控制文字不受按钮缩放的影响
     void Update()
     {
         var parentScale = transform.parent.localScale;

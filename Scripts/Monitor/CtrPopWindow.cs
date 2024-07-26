@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CtrPopWindow : MonoBehaviour
@@ -38,14 +37,12 @@ public class CtrPopWindow : MonoBehaviour
         while (elapsedTime < time)
         {
             float t = elapsedTime / time;
-
             float targetPostionX = Mathf.SmoothStep(initialPosition.x, newLocalPosition.x, t);
             transform.localPosition = new Vector3(targetPostionX, 0, 0);
 
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
         transform.localPosition = newLocalPosition;
     }
 }

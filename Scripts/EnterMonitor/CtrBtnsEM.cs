@@ -114,6 +114,10 @@ public class CtrBtnsEM : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 改变显示内容
+    /// </summary>
+    /// <param name="index"></param>
     private void changeContent(int index)
     {
         if (index == 0)
@@ -142,7 +146,9 @@ public class CtrBtnsEM : MonoBehaviour
             IsReleasingHangZhou = false;
         }
     }
-
+    /// <summary>
+    /// 将按钮禁止并改变按钮颜色
+    /// </summary>
     private void ForbiddenBtn()
     {
         Btns.ForEach(b =>
@@ -153,7 +159,7 @@ public class CtrBtnsEM : MonoBehaviour
             images[1].color = new UnityEngine.Color(170 / 255f, 170 / 255f, 170 / 255f);
         });
     }
-
+    //激活按钮
     private void EnableBtn()
     {
         StartCoroutine(ExecuteAfterTime(() => Btns.ForEach(b =>

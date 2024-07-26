@@ -31,7 +31,9 @@ public class CtrVideoPlayer : MonoBehaviour
         isPlaying = false;
 
     }
-
+    /// <summary>
+    /// 控制视频暂停播放
+    /// </summary>
     public void TogglePlayPause()
     {
         if (isPlaying)
@@ -49,7 +51,7 @@ public class CtrVideoPlayer : MonoBehaviour
         PauseBtn(!isPlaying);
     }
 
-
+    //控制暂停图标显示
     private void PauseBtn(bool state)
     {
         pause.SetActive(state);
