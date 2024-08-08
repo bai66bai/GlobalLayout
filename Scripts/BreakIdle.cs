@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class BreakIdle : MonoBehaviour
 {
 
+    public TCPClient client;
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +39,7 @@ public class BreakIdle : MonoBehaviour
                         obj.SetActive(true);
                 }
             }
+            client.SendMsg("break");
         }
 
 

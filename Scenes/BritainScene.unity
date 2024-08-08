@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824954453}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6ea56dbdb1366e469bf53427dece5f9, type: 3}
   m_Name: 
@@ -1376,6 +1376,7 @@ MonoBehaviour:
   interval: 0.15
   moveDuration: 0.1
   IsMoveEnd: 0
+  ctrImgScale: {fileID: 0}
 --- !u!1 &890999129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,6 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.8
+  PopuImages: []
   DetailList: []
 --- !u!1 &1099441354
 GameObject:
@@ -2331,9 +2333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7408d1df3fbe58f4f9565a57210c3e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isZoomed: 0
   duration: 0.2
   fadeDuration: 0.3
   client: {fileID: 1732671336}
+  CtrlImage: {fileID: 0}
 --- !u!114 &1114762858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3882,7 +3886,6 @@ MonoBehaviour:
   - {fileID: 824954453}
   BgPanel: {fileID: 1839817041}
   client: {fileID: 1732671336}
-  Details: []
   CtrlBackImage: {fileID: 997201933}
   BackBtn: {fileID: 306639351}
 --- !u!1 &1804867993

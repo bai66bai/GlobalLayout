@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class TCPClient : MonoBehaviour
 {
-    private readonly string targetIp = "192.168.3.13";
+    private readonly string targetIp = "192.168.3.18";
     [SerializeField]
     private int targetPort;
 

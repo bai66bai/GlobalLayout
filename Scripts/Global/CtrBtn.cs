@@ -28,7 +28,6 @@ public class CtrBtn : MonoBehaviour
     private Color unSelectedColor = new(1f, 1f, 1f, 1f);
     public void OnClickBtn(string name)
     {
-        Debug.Log(name);
         Btns.ForEach(b =>
         {
             int index = Btns.IndexOf(b);

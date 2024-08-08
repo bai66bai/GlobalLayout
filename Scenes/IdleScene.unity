@@ -483,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737762788}
   - component: {fileID: 737762789}
+  - component: {fileID: 737762790}
   m_Layer: 0
   m_Name: MainObj
   m_TagString: Untagged
@@ -520,6 +521,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9482c843739d08948a9d61ed977239fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  client: {fileID: 1269031113}
+--- !u!114 &737762790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737762787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPort: 8686
 --- !u!1 &922424895
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269031111}
   - component: {fileID: 1269031112}
+  - component: {fileID: 1269031113}
   m_Layer: 0
   m_Name: IdelWatcher
   m_TagString: Untagged
@@ -709,6 +725,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdleObj: {fileID: 737762787}
   ImgLoading: {fileID: 922424895}
+--- !u!114 &1269031113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269031109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPort: 8686
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

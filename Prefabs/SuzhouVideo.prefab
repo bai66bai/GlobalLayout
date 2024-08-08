@@ -1041,7 +1041,7 @@ MonoBehaviour:
   screen: {fileID: 0}
   canvasScreen: {fileID: 3990155541230892341}
   texture: {fileID: 0}
-  path: https://media.w3.org/2010/05/sintel/trailer.mp4
+  path: https://media.w3.o/2010/05/sintel/trailer.mp4
   flipTextureX: 1
   flipTextureY: 1
   playOnAwake: 1

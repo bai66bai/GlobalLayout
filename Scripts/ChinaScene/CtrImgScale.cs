@@ -8,7 +8,7 @@ public class CtrImgScale : MonoBehaviour
 {
 
 
-    private bool isZoomed = false;  
+    public bool isZoomed = false;  
 
     public float duration = 0.5f;
 
@@ -67,18 +67,19 @@ public class CtrImgScale : MonoBehaviour
             if (isZoomed)
             {
                      client.SendMsg($"small:{cityName}");
+                Debug.Log(originalPosition);
                     StartCoroutine(AnimateZoom(originalPosition, originalSize));
                     CtrlImage.enabled = true;
             }
             else
             {
                     client.SendMsg($"big:{cityName}");
-                    originalPosition = rectTransform.position; //保存初始位置
-                    StartCoroutine(AnimateZoom(targetPosition, targetSize));
+                originalPosition = rectTransform.position; //保存初始位置
+                StartCoroutine(AnimateZoom(targetPosition, targetSize));
                     CtrlImage.enabled = false;
 
             }
-    // 切换状态
+            // 切换状态
             isZoomed = !isZoomed;
             }
     }
@@ -89,14 +90,13 @@ public class CtrImgScale : MonoBehaviour
         Vector2 startPosition = rectTransform.position;
         Vector2 startSize = rectTransform.sizeDelta;
         float elapsedTime = 0f;
-
         while (elapsedTime < duration)
         {
             float t = elapsedTime / duration;  
             rectTransform.position = Vector2.Lerp(startPosition, targetPos, t);
             rectTransform.sizeDelta = Vector2.Lerp(startSize, tarSize, t);
             elapsedTime += Time.smoothDeltaTime;
-            yield return null;
+            yield return null; 
         }
         // 确保最终值
         rectTransform.position = targetPos;

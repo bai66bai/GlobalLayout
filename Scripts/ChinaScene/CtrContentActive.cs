@@ -16,6 +16,8 @@ public class CtrContentActive : MonoBehaviour
 
     public bool IsMoveEnd = false;
 
+    public CtrImgScale ctrImgScale;
+
     void OnEnable()
     {
         StartMove();
@@ -71,10 +73,13 @@ public class CtrContentActive : MonoBehaviour
 
     private void OnDisable()
     {
-        Contents.ForEach(u =>
+        if (!ctrImgScale.isZoomed)
+        {
+            Contents.ForEach(u =>
         {
             u.localPosition = StartPosition;
         });
+        }     
     }
 
 }
