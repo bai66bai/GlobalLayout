@@ -16,6 +16,14 @@ public class ReadStreamingAssets : MonoBehaviour
 
     private void Update()
     {
+    //    if (vLCPlayerExample != null
+    //&& vLCPlayerExample.mediaPlayer != null)
+    //    {
+    //        Debug.Log(vLCPlayerExample.mediaPlayer.Time);
+    //        Debug.Log(vLCPlayerExample.mediaPlayer.Length);
+    //    }
+
+
         if (vLCPlayerExample != null
             && vLCPlayerExample.mediaPlayer != null
             && vLCPlayerExample.mediaPlayer.Time > vLCPlayerExample.mediaPlayer.Length - 1)
