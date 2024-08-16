@@ -18,7 +18,7 @@ public class CtrImgScale : MonoBehaviour
 
     public EventTrigger CtrlImage;
 
-    private Vector2 targetSize = new(1066f, 600f);
+    private Vector2 targetSize = new(1080f, 614f);
 
     private Vector2 targetPosition;
 
