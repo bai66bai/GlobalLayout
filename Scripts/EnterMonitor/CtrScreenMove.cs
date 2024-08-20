@@ -21,11 +21,11 @@ public class CtrScreenMove : MonoBehaviour
     private bool isInOver = true;
     private bool isOutOver = true;
 
-    private Vector3 centerPosition = new(0f, 0f, 0f);
+    private Vector3 centerPosition = new(6f, -3f, 0f);
 
     private int selectedIndex;
 
-    private Vector3 centerLocalScale = new(2.1f, 2.1f, 0f);
+    private Vector3 centerLocalScale = new(2.1f, 2.15f, 0f);
 
     private void Start()
     {
