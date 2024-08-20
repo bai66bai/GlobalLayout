@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class TCPClient : MonoBehaviour
 {
-    private readonly string targetIp = "192.168.3.18";
+    private readonly string targetIp = "127.0.0.1";
     [SerializeField]
     private int targetPort;
 
@@ -18,6 +18,7 @@ public class TCPClient : MonoBehaviour
 
     public void SendMsg(string msg)
     {
+        Debug.Log(msg);
         messageQueue.Enqueue(msg);
         if (!isProcessing)
         {
@@ -53,6 +54,7 @@ public class TCPClient : MonoBehaviour
             // 发送初始消息
             yield return SendMessageWithoutConnect(msg);
     
+
     }
 
     // 封装发送消息的功能为协程
