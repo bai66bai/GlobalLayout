@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 6977844396390385042}
   texture: {fileID: 0}
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: e27b2ae5c4f1f0a4781aef8381ac8a3d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -263,7 +264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 038f3f6330803cc4294e0f50a63c4584, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 2933292129542221963}
   texture: {fileID: 0}
@@ -461,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 46d7a555d50daa141a4afd3bf8f51ca2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -533,7 +535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 46d7a555d50daa141a4afd3bf8f51ca2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -631,6 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 8955477248386221829}
   texture: {fileID: 0}
@@ -838,7 +841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 038f3f6330803cc4294e0f50a63c4584, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -936,6 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 8976217934177348014}
   texture: {fileID: 0}
@@ -1036,7 +1040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 0655a34019a3ca74e8ca5f36acaeb079, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1134,6 +1138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 1031354187771596949}
   texture: {fileID: 0}
@@ -1295,7 +1300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 0655a34019a3ca74e8ca5f36acaeb079, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1367,7 +1372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: e27b2ae5c4f1f0a4781aef8381ac8a3d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1439,7 +1444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 38435593bea2ba14b9d0532c393cd91c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1612,6 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 4886274513637099210}
   texture: {fileID: 0}
@@ -1810,7 +1816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 0655a34019a3ca74e8ca5f36acaeb079, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1908,6 +1914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 1722598943394004657}
   texture: {fileID: 0}
@@ -2056,8 +2063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 418, y: 264}
+  m_AnchoredPosition: {x: 0, y: -4.8272}
+  m_SizeDelta: {x: 418, y: 262.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8905354071579972287
 CanvasRenderer:
@@ -2109,6 +2116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 2370698406173515752}
   texture: {fileID: 0}
@@ -2284,7 +2292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: e27b2ae5c4f1f0a4781aef8381ac8a3d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2382,6 +2390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 4963987698644661084}
   texture: {fileID: 0}
@@ -2690,6 +2699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 7827870989445718690}
   texture: {fileID: 0}
@@ -2763,8 +2773,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 418, y: 264}
+  m_AnchoredPosition: {x: 0, y: -4.8272}
+  m_SizeDelta: {x: 418, y: 262.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1365443219863769309
 CanvasRenderer:
@@ -2816,6 +2826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 6687058340079595020}
   texture: {fileID: 0}
@@ -3044,7 +3055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 038f3f6330803cc4294e0f50a63c4584, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3142,6 +3153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 7129170736014025747}
   texture: {fileID: 0}
@@ -3242,7 +3254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 38435593bea2ba14b9d0532c393cd91c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3340,6 +3352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 2791647711445507670}
   texture: {fileID: 0}
@@ -3440,7 +3453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 46d7a555d50daa141a4afd3bf8f51ca2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3538,6 +3551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 3501558771503184164}
   texture: {fileID: 0}
@@ -3726,8 +3740,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 418, y: 264}
+  m_AnchoredPosition: {x: 0, y: -4.8272}
+  m_SizeDelta: {x: 418, y: 262.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1006357360577805535
 CanvasRenderer:
@@ -3779,6 +3793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54f68b0283bcfc408393ef8ebab9465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNeedAwakeStart: 1
   screen: {fileID: 0}
   canvasScreen: {fileID: 2148423572683830934}
   texture: {fileID: 0}
@@ -3879,7 +3894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 38435593bea2ba14b9d0532c393cd91c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
