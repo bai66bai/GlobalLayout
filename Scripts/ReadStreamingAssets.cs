@@ -1,3 +1,4 @@
+using LibVLCSharp;
 using System.Collections;
 using System.IO;
 using Unity.VisualScripting;
@@ -7,8 +8,9 @@ using UnityEngine.Networking;
 public class ReadStreamingAssets : MonoBehaviour
 {
     public VLCPlayerExample vLCPlayerExample;
-    public string LocalPath;
-    // Start is called before the first frame update
+    public string VideoName;
+
+    private bool isStop = false;
     void Start()
     {
         StartCoroutine(ReadFile());
@@ -16,32 +18,32 @@ public class ReadStreamingAssets : MonoBehaviour
 
     private void Update()
     {
-    //    if (vLCPlayerExample != null
-    //&& vLCPlayerExample.mediaPlayer != null)
-    //    {
-    //        Debug.Log(vLCPlayerExample.mediaPlayer.Time);
-    //        Debug.Log(vLCPlayerExample.mediaPlayer.Length);
-    //    }
-
-
         if (vLCPlayerExample != null
-            && vLCPlayerExample.mediaPlayer != null
-            && vLCPlayerExample.mediaPlayer.Time > vLCPlayerExample.mediaPlayer.Length - 1)
+            && vLCPlayerExample.mediaPlayer != null)
         {
-            vLCPlayerExample.mediaPlayer.SetTime(0);
+
+            if (vLCPlayerExample.mediaPlayer.State == VLCState.Stopping && !isStop)
+            {
+                isStop = true;
+                vLCPlayerExample.Resume();
+            }
+            else
+            {
+                isStop = false;
+            }
         }
     }
 
     IEnumerator ReadFile()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, "a.mp4");
+        string filePath = Path.Combine(Application.streamingAssetsPath, VideoName.Trim());
 
         UnityWebRequest www = UnityWebRequest.Get(filePath);
         yield return www.SendWebRequest();
 
         if (www.result == UnityWebRequest.Result.Success)
         {
-            string data = www.downloadHandler.text;
+            vLCPlayerExample.path = filePath;
             vLCPlayerExample.StrartVideo(filePath);
         }
         else

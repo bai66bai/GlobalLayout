@@ -215,7 +215,31 @@ public class VLCPlayerExample : MonoBehaviour
 		texture = null;
 	}
 
-	public void Seek(long timeDelta)
+    public void Resume()
+    {
+        if (mediaPlayer != null)
+        {
+            ReleaseCache();
+            // 重新加载媒体以确保缓存被清空
+            mediaPlayer.Media.AddOption(":network-caching=3000");
+            mediaPlayer.Play();
+        }
+    }
+
+    private void ReleaseCache()
+    {
+        if (mediaPlayer != null)
+        {
+            // 重新加载当前媒体来释放缓存
+            mediaPlayer.Media?.Dispose();
+            var trimmedPath = path.Trim(new char[] { '"' });
+            var media = new Media(new Uri(trimmedPath));
+            mediaPlayer.Media = media;
+            media.Dispose();
+        }
+    }
+
+    public void Seek(long timeDelta)
 	{
 		Log("VLCPlayerExample Seek " + timeDelta);
 		mediaPlayer.SetTime(mediaPlayer.Time + timeDelta);
