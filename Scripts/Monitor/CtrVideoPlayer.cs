@@ -5,7 +5,6 @@ using UnityEngine.Video;
 public class CtrVideoPlayer : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // 视频播放器组件
-    public GameObject controlButton;    // 控制播放暂停的按钮
 
     public TCPClient client;
 
