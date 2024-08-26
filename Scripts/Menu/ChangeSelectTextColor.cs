@@ -14,7 +14,8 @@ public class ChangeSelectTextColor : MonoBehaviour
     {
         TextMeshProUGUIs.ForEach(text =>
         {
-            texts.color = texts == text ? selectColor : defultColor;
+
+            text.color = texts == text ? selectColor : defultColor;      
         });
     }
 

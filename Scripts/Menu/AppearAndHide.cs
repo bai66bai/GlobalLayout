@@ -13,8 +13,11 @@ public class AppearAndHide : MonoBehaviour
     public Image OpenImg;
 
     private bool IsShow = false;
+    private bool IsFinsh = true;
     public void TogglePopoActive()
     {
+        if (!IsFinsh) return;
+        IsFinsh = false;
         if (IsShow)
         {
             EndColosePopo();
@@ -84,6 +87,7 @@ public class AppearAndHide : MonoBehaviour
         // 确保最终alpha为1（255）
         color.a = 1f;
         image.color = color;
+        IsFinsh = true;
     }
 
 
@@ -126,6 +130,7 @@ public class AppearAndHide : MonoBehaviour
 
         // 确保最终透明度为0
         image.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
+        IsFinsh = true;
     }
     IEnumerator FadeOutText(TextMeshProUGUI text, float duration)
     {

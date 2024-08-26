@@ -261,7 +261,19 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: EarlyDetection
+            m_StringArgument: EarlyDetectionScene
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 708655069}
+          m_TargetAssemblyTypeName: ChangeSelectTextColor, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 199413019}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &91032357
@@ -538,6 +550,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: ManufacturingCapacityScene
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 708655069}
+          m_TargetAssemblyTypeName: ChangeSelectTextColor, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 776409824}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &199413017
@@ -992,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1026,13 +1050,14 @@ GameObject:
   m_Component:
   - component: {fileID: 708655067}
   - component: {fileID: 708655068}
+  - component: {fileID: 708655069}
   m_Layer: 5
   m_Name: PopoWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &708655067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1081,6 +1106,24 @@ MonoBehaviour:
   duration: 0.5
   CloseImg: {fileID: 1869043513}
   OpenImg: {fileID: 1370032803}
+--- !u!114 &708655069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708655066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f1800dc953c0e4f81dfced8b7a5d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextMeshProUGUIs:
+  - {fileID: 1599375226}
+  - {fileID: 373729039}
+  - {fileID: 776409824}
+  - {fileID: 199413019}
+  - {fileID: 1798881583}
 --- !u!1 &776409822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1357,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: GlobalLayoutScene
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 708655069}
+          m_TargetAssemblyTypeName: ChangeSelectTextColor, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 373729039}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1370032802
@@ -1629,13 +1684,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-          m_MethodName: LoadNewScene
-          m_Mode: 5
+        - m_Target: {fileID: 708655069}
+          m_TargetAssemblyTypeName: ChangeSelectTextColor, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1599375226}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: PromotionalVideoScene
@@ -1788,6 +1843,7 @@ GameObject:
   - component: {fileID: 1697330038}
   - component: {fileID: 1697330037}
   - component: {fileID: 1697330036}
+  - component: {fileID: 1697330039}
   m_Layer: 5
   m_Name: BackMenu
   m_TagString: Untagged
@@ -1844,6 +1900,18 @@ MonoBehaviour:
             m_StringArgument: MenuScene
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1697330039}
+          m_TargetAssemblyTypeName: PauseVideo, Assembly-CSharp
+          m_MethodName: StopVideo
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1697330037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,6 +1950,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697330034}
   m_CullTransparentMesh: 1
+--- !u!114 &1697330039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697330034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb1427c5df2802458ab029f0fdc3081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  client: {fileID: 495858194}
+  player: {fileID: 1715899872}
 --- !u!1 &1708662112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +2028,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: ProductionProcessScene
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 708655069}
+          m_TargetAssemblyTypeName: ChangeSelectTextColor, Assembly-CSharp
+          m_MethodName: ChangeColor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1798881583}
+            m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1715899868
