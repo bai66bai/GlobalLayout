@@ -221,7 +221,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 551006169}
   - component: {fileID: 551006173}
   - component: {fileID: 551006174}
+  - component: {fileID: 551006175}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -473,6 +474,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vLCPlayerExample: {fileID: 551006173}
   VideoName: a.mp4
+--- !u!114 &551006175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551006168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93720e32261efc045b2925977dc61a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vlcPlayerExample: {fileID: 551006173}
 --- !u!1 &737762787
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +498,7 @@ GameObject:
   - component: {fileID: 737762788}
   - component: {fileID: 737762789}
   - component: {fileID: 737762790}
+  - component: {fileID: 737762791}
   m_Layer: 0
   m_Name: MainObj
   m_TagString: Untagged
@@ -535,6 +550,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPort: 8686
+--- !u!114 &737762791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737762787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94e8afc71a12254f83a04cb5a4b0bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &922424895
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
