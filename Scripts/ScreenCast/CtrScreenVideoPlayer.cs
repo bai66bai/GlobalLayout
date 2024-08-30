@@ -86,7 +86,7 @@ public class CtrScreenVideoPlayer : MonoBehaviour
     {
         if (ScreenStore.IsBegin)
         {
-            client.SendMsg($"ScreenCast:togglePlay");
+            client.SendMsg($"ScreenCast:togglePlay-{ScreenStore.VideoSceneName}");
         }
     }
 

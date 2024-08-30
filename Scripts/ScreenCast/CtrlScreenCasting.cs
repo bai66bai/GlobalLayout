@@ -16,14 +16,14 @@ public class CtrlScreenCasting : MonoBehaviour
         if (IsScreenCasting)
         {
             ChangeImg();
-            client.SendMsg($"play:{VideoName}");
+            client.SendMsg($"play:{VideoName}-{ScreenStore.VideoSceneName}");
             player.CtrlResetVideo();
             ScreenStore.IsBegin = true;
         }
         else
         {
             ChangeImg();
-            client.SendMsg($"close:screenCasting");
+            client.SendMsg($"close:screenCasting-{ScreenStore.VideoSceneName}");
             ScreenStore.IsBegin = false;
         }
         IsScreenCasting = !IsScreenCasting;
