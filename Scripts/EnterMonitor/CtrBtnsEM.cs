@@ -24,6 +24,8 @@ public class CtrBtnsEM : MonoBehaviour
 
     private BtnActive[] btnActivesScripts;
 
+    private string currentName = string.Empty;
+
     private void Start()
     {
         changeStyle(TabStore.SelectedTab);
@@ -35,6 +37,8 @@ public class CtrBtnsEM : MonoBehaviour
 
     public void OnClickBtn(string name)
     {
+        // 如果被点击的按钮已经处于激活，直接return
+        if (name == currentName) return;
         ForbiddenBtn();
         EnableBtn();
         foreach (var btn in btnActivesScripts)
@@ -122,6 +126,7 @@ public class CtrBtnsEM : MonoBehaviour
     {
         if (index == 0)
         {
+            currentName = "Suzhou";
             VLCPlayerExample[] vLCPlayer1Examples = Hangzhou.GetComponentsInChildren<VLCPlayerExample>();
             foreach (var item in vLCPlayer1Examples)
             {
@@ -134,7 +139,7 @@ public class CtrBtnsEM : MonoBehaviour
         }
         else
         {
-
+            currentName = "Hangzhou";
             VLCPlayerExample[] vLCPlayer1Examples = Suzhou.GetComponentsInChildren<VLCPlayerExample>();
             foreach (var item in vLCPlayer1Examples)
             {
