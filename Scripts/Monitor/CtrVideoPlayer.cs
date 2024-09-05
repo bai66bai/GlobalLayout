@@ -10,7 +10,7 @@ public class CtrVideoPlayer : MonoBehaviour
 
     private bool isPlaying = false; // 当前播放状态
 
-    private GameObject pause;
+    public GameObject pause;
 
     void Start()
     {
@@ -18,24 +18,19 @@ public class CtrVideoPlayer : MonoBehaviour
         {
             videoPlayer = GetComponent<VideoPlayer>();
         }
-        pause = GameObject.Find("Pause");
         videoPlayer.loopPointReached += (vp) =>
         {
             videoPlayer.time = 0;
             PauseBtn(true);
-            isPlaying = false;
+            isPlaying = true;
         };
-        // 确保视频一开始是暂停的
-        videoPlayer.Pause();
-        isPlaying = false;
-
     }
     /// <summary>
     /// 控制视频暂停播放
     /// </summary>
     public void TogglePlayPause()
     {
-        if (isPlaying)
+        if (!isPlaying)
         {
             client.SendMsg($"touchScreen:togglePlay");
             videoPlayer.Pause();
@@ -47,7 +42,7 @@ public class CtrVideoPlayer : MonoBehaviour
         }
         isPlaying = !isPlaying;
 
-        PauseBtn(!isPlaying);
+        PauseBtn(isPlaying);
     }
 
     //控制暂停图标显示

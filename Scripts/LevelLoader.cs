@@ -33,6 +33,13 @@ public class LevelLoader : MonoBehaviour
         LoadNewScene(LevelStore.LastSceneName);
     }
 
+    public void LoadSceneNoAnimation(string sceneName)
+    {
+        StartCoroutine(LoadLevelNoAnimation(sceneName, true));
+    }
+
+
+
     IEnumerator LoadLevel(string sceneName, bool shouldSend)
     {
         if (shouldSend && sceneName != "MenuScene")
@@ -45,6 +52,18 @@ public class LevelLoader : MonoBehaviour
         // 等待动画播放完成
         yield return new WaitForSeconds(transitionTime);
 
+        LevelStore.LastSceneName = SceneManager.GetActiveScene().name;
+
+        // 切换场景
+        SceneManager.LoadScene(sceneName);
+    }
+
+
+    IEnumerator LoadLevelNoAnimation(string sceneName, bool shouldSend)
+    {
+        if (shouldSend && sceneName != "MenuScene")
+            client.SendMsg($"loadSceneNoAnimation:{sceneName}");
+        yield return new WaitForSeconds(transitionTime);
         LevelStore.LastSceneName = SceneManager.GetActiveScene().name;
 
         // 切换场景
