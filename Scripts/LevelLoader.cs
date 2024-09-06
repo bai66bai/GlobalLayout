@@ -63,7 +63,7 @@ public class LevelLoader : MonoBehaviour
     {
         if (shouldSend && sceneName != "MenuScene")
             client.SendMsg($"loadSceneNoAnimation:{sceneName}");
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(0.5f);
         LevelStore.LastSceneName = SceneManager.GetActiveScene().name;
 
         // ÇÐ»»³¡¾°
