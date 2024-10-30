@@ -12,8 +12,6 @@ public  class TCPMsgHandler : MonoBehaviour
     public virtual void OnMsg(string msg) 
     {
         MonitorStore.MonitorState = msg;
-        Debug.Log(msg);
         levelLoader.LoadNewScene("MenuScene");
     }
 }
-
