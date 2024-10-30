@@ -15,9 +15,9 @@ public class TCPServer : MonoBehaviour
 
     void Start()
     {
+        tcpMsgHandler = GetComponent<TCPMsgHandler>();
         // 启动服务器监听协程
         StartCoroutine(ServerSetup());
-        tcpMsgHandler = GetComponent<TCPMsgHandler>();
     }
 
      IEnumerator ServerSetup()

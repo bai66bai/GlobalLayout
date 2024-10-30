@@ -42,7 +42,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(string sceneName, bool shouldSend)
     {
-        if (shouldSend && sceneName != "MenuScene")
+        if (shouldSend)
             client.SendMsg($"loadScene:{sceneName}");
 
         // ²¥·Å¶¯»­
