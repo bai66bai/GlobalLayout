@@ -1056,6 +1056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560466362}
   - component: {fileID: 560466364}
+  - component: {fileID: 560466365}
   m_Layer: 5
   m_Name: China
   m_TagString: Untagged
@@ -1099,6 +1100,20 @@ MonoBehaviour:
   videoPlayer: {fileID: 478120854}
   nextSceneName: ChinaScene
   GameObject: {fileID: 560466361}
+--- !u!114 &560466365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560466361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0355de5e302a4642a6357ccc055db7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VideoPlayer: {fileID: 478120854}
+  VideoName: china.mov
 --- !u!1 &569073542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069086129}
   - component: {fileID: 1069086130}
+  - component: {fileID: 1069086131}
   m_Layer: 5
   m_Name: Britain
   m_TagString: Untagged
@@ -1881,6 +1897,20 @@ MonoBehaviour:
   videoPlayer: {fileID: 2068733207}
   nextSceneName: BritainScene
   GameObject: {fileID: 1069086128}
+--- !u!114 &1069086131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069086128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0355de5e302a4642a6357ccc055db7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VideoPlayer: {fileID: 2068733207}
+  VideoName: britain.mov
 --- !u!1 &1072538433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534217488}
   - component: {fileID: 1534217489}
+  - component: {fileID: 1534217490}
   m_Layer: 5
   m_Name: America
   m_TagString: Untagged
@@ -2842,6 +2873,20 @@ MonoBehaviour:
   videoPlayer: {fileID: 1246614330}
   nextSceneName: AmericaScene
   GameObject: {fileID: 1534217487}
+--- !u!114 &1534217490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534217487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0355de5e302a4642a6357ccc055db7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VideoPlayer: {fileID: 1246614330}
+  VideoName: america.mov
 --- !u!1 &1691413831
 GameObject:
   m_ObjectHideFlags: 0
