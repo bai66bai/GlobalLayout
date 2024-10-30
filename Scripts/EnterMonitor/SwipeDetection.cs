@@ -8,7 +8,6 @@ public class SwipeDetection : MonoBehaviour
     public float duration = 0.5f;
     public int MovingDistance = 1920;
     private TCPClient client;
-    public Turnthepage Turnthepage;
 
     private bool isFinish = true;
     [HideInInspector] public int bigIndex; //最大滑动次数
@@ -24,7 +23,6 @@ public class SwipeDetection : MonoBehaviour
     }
 
 
-
     public void ToRight()
     {
         client.SendMsg($"scroll:right");
@@ -34,7 +32,6 @@ public class SwipeDetection : MonoBehaviour
             Vector3 targetLocalPosition = new Vector3(localPostion.x + MovingDistance, localPostion.y, localPostion.z);
             StartCoroutine(MoveAndScaleOverTime(targetLocalPosition, duration));
             --nowIndex;
-            Turnthepage.ChangeBtnColor(nowIndex);
             isFinish = false;
         }
     }
@@ -49,7 +46,6 @@ public class SwipeDetection : MonoBehaviour
             Vector3 targetLocalPosition = new Vector3(localPostion.x - MovingDistance, localPostion.y, localPostion.z);
             StartCoroutine(MoveAndScaleOverTime(targetLocalPosition, duration));
             ++nowIndex;
-            Turnthepage.ChangeBtnColor(nowIndex);
             isFinish = false;
         }
     }

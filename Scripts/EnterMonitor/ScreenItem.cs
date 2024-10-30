@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class ScreenItem : MonoBehaviour, IPointerClickHandler
 {
-   public CtrScreenMove CtrScreenMove;
+    public CtrScreenMove CtrScreenMove;
     private new string name;
     private void Start()
     {
