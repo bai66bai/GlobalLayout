@@ -5,6 +5,7 @@ public class BreakIdle : MonoBehaviour
 {
 
     public TCPClient client;
+    public float breakDuration = 20f;
 
     // Update is called once per frame
     void Update()

@@ -99,8 +99,7 @@ GameObject:
   - component: {fileID: 5997246011084782074}
   - component: {fileID: 3041061302705702435}
   - component: {fileID: 4031959607066056227}
-  - component: {fileID: 1981230254832359498}
-  - component: {fileID: 7264406959058801427}
+  - component: {fileID: 3961463807814172989}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -137,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 569106828616372255}
-  transitionTime: 0.75
+  transitionTime: 0.4
 --- !u!114 &4031959607066056227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPort: 8686
---- !u!114 &1981230254832359498
+--- !u!114 &3961463807814172989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,22 +159,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5954357341867788819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 537c79a6536a43b4889d3e4fc89650b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dabf90118a0bf24f8a1d2368ae370b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 8686
---- !u!114 &7264406959058801427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5954357341867788819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2554779eb90a7ff4bbd4fc3e89349ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  timeoutSeconds: 900
 --- !u!1 &9202181263731316991
 GameObject:
   m_ObjectHideFlags: 0

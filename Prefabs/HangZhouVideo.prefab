@@ -218,9 +218,7 @@ GameObject:
   - component: {fileID: 3428285920887242534}
   - component: {fileID: 2627041699022418031}
   - component: {fileID: 198216907700893579}
-  - component: {fileID: 4467755951958043194}
   - component: {fileID: 8715091546068142508}
-  - component: {fileID: 1702305948399857550}
   m_Layer: 5
   m_Name: HangzhouPanel
   m_TagString: Untagged
@@ -288,23 +286,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4467755951958043194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866879739621897035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d12e2227025ee644a8c364f8329978c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeArea: {fileID: 3428285920887242534}
-  duration: 0.5
-  MovingDistance: 1920
-  bigIndex: 0
-  nowIndex: 0
 --- !u!114 &8715091546068142508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,19 +302,6 @@ MonoBehaviour:
   - {fileID: 4629645152956078014}
   - {fileID: 6577523718075357053}
   - {fileID: 2187876865605749709}
---- !u!114 &1702305948399857550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866879739621897035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97777669fdae7154ba7135bfb3d1d92e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetection: {fileID: 4467755951958043194}
 --- !u!1 &1007653257956638708
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7CBE\u7EAF\u95F4"
+  m_text: "\u7F50\u88C5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
@@ -1637,7 +1605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6295\u6599\u95F4"
+  m_text: "\u7EC6\u80DE\u57F9\u517B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
@@ -1943,7 +1911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u62C6\u6258\u8F93\u9001\u533A"
+  m_text: "\u7EAF\u5316"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,
@@ -2861,7 +2829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \u7EC6\u80DE\u57F9\u517B\u95F4"
+  m_text: "\u5206\u88C5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2d8f9217d45a4145885c58b327497ea, type: 2}
   m_sharedMaterial: {fileID: -8518520717086399264, guid: b2d8f9217d45a4145885c58b327497ea,

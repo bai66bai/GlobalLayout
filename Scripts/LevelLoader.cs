@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,7 +37,6 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-
     IEnumerator LoadLevel(string sceneName, bool shouldSend)
     {
         if (shouldSend)
@@ -63,7 +60,7 @@ public class LevelLoader : MonoBehaviour
     {
         if (shouldSend && sceneName != "MenuScene")
             client.SendMsg($"loadSceneNoAnimation:{sceneName}");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(transitionTime);
         LevelStore.LastSceneName = SceneManager.GetActiveScene().name;
 
         // ÇÐ»»³¡¾°

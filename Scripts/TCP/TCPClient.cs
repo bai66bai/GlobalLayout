@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
 
 public class TCPClient : MonoBehaviour
 {
-    private readonly string targetIp = "127.0.0.1"; 
+    private readonly string targetIp = "192.168.5.5"; 
     [SerializeField]
     private int targetPort;
 
@@ -16,9 +17,33 @@ public class TCPClient : MonoBehaviour
     private Queue<string> messageQueue = new();
     private bool isProcessing = false;
 
+   /* private string logFilePath;
+
+    void Awake()
+    {
+        Debug.Log(Application.persistentDataPath);
+        // 设置日志文件路径
+        logFilePath = Path.Combine(Application.persistentDataPath, "log.txt");
+
+        // 订阅 logMessageReceived 事件
+        Application.logMessageReceived += LogMessageToFile;
+    }
+
+    void OnDestroy()
+    {
+        // 取消订阅 logMessageReceived 事件
+        Application.logMessageReceived -= LogMessageToFile;
+    }
+
+    // 将日志消息写入文件
+    private void LogMessageToFile(string logString, string stackTrace, LogType type)
+    {
+        string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{type}] {logString}\n{stackTrace}\n";
+        File.AppendAllText(logFilePath, logEntry);
+    }*/
+
     public void SendMsg(string msg)
     {
-        Debug.Log(msg);
         messageQueue.Enqueue(msg);
         if (!isProcessing)
         {

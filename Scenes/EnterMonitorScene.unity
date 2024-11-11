@@ -818,16 +818,16 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 510255407}
-          m_TargetAssemblyTypeName: CtrLoadScene, Assembly-CSharp
-          m_MethodName: StartDestroy
+        - m_Target: {fileID: 1122781596}
+          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+          m_MethodName: LoadNewScene
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: MonitorScene
+            m_StringArgument: MenuScene
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &510255407
@@ -1081,11 +1081,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5954357341867788819, guid: b67cd987ee8d67741ad86bbbe679eeca,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1122781598}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b67cd987ee8d67741ad86bbbe679eeca, type: 3}
 --- !u!114 &1122781596 stripped
 MonoBehaviour:
@@ -1093,38 +1089,19 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1122781595}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122781597}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec78393e4f18a7e458b088dfd1530ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1122781597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5954357341867788819, guid: b67cd987ee8d67741ad86bbbe679eeca,
-    type: 3}
-  m_PrefabInstance: {fileID: 1122781595}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1122781598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122781597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dabf90118a0bf24f8a1d2368ae370b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeoutSeconds: 900
 --- !u!114 &1122781599 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4031959607066056227, guid: b67cd987ee8d67741ad86bbbe679eeca,
     type: 3}
   m_PrefabInstance: {fileID: 1122781595}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122781597}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f0a825f40ef24b46a63750af7be434b, type: 3}
@@ -1825,9 +1802,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2016929357}
-          m_TargetAssemblyTypeName: CtrLoadScene, Assembly-CSharp
-          m_MethodName: StartDestroy
+        - m_Target: {fileID: 1122781596}
+          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+          m_MethodName: LoadNewScene
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1989,6 +1966,6 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 667284518}
   - {fileID: 1122781595}
+  - {fileID: 667284518}
   - {fileID: 458055566}

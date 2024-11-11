@@ -5,12 +5,18 @@ public class SceneIdle : MonoBehaviour
 {
 
     public float timeoutSeconds = 5; // 用户无操作的超时时间（秒）
+    public float breakDuration = 20f;
+
     private float lastInteractionTime; // 记录最后操作时间
+    private float lastBreakTime = 0;
+
+   
 
     void Start()
     {
+        lastInteractionTime = Time.time;
         SceneManager.LoadSceneAsync("IdleScene", LoadSceneMode.Additive);
-        ResetTimer();
+        lastBreakTime = Time.time;
     }
 
     void Update()
@@ -18,7 +24,11 @@ public class SceneIdle : MonoBehaviour
         // 检查是否有键盘输入或鼠标移动
         if (Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space))
         {
-            ResetTimer();
+            lastInteractionTime = Time.time;
+            if (Time.time - lastBreakTime > breakDuration)
+            {
+                lastBreakTime = lastInteractionTime;
+            }
         }
 
         // 检查是否超时
@@ -51,12 +61,7 @@ public class SceneIdle : MonoBehaviour
         }
     }
 
-    private void OnEnable() => ResetTimer();
+    private void OnEnable() => lastBreakTime = Time.time;
 
-    // 重置计时器
-    void ResetTimer()
-    {
-        lastInteractionTime = Time.time;
-    }
 
 }
